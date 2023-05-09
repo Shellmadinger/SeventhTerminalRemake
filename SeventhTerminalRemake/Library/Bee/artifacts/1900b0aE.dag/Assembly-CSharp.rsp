@@ -345,6 +345,7 @@
 "Assets/Scripts/BasicMovement3D.cs"
 "Assets/Scripts/MouseControlledCamera.cs"
 "Assets/Scripts/RaycastGun.cs"
+"Assets/Scripts/Target.cs"
 -langversion:9.0
 
 /deterministic
