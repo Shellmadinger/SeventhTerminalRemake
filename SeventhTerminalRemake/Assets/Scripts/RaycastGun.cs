@@ -9,8 +9,8 @@ public class RaycastGun : MonoBehaviour
     public Camera fpcamera;
     public Transform trailOrigin;
     public Transform trailTarget;
-
-    Ray ray;
+    public ParticleSystem muzzleFlash;
+    public GameObject hitEffect;
     RaycastHit hit;
     // Update is called once per frame
     void Update()
@@ -23,7 +23,7 @@ public class RaycastGun : MonoBehaviour
 
     void Fire()
     {
-       
+        muzzleFlash.Play();
 
         var trail = Instantiate(bulletTrail, trailOrigin.transform.position, Quaternion.identity);
         trail.AddPosition(trailOrigin.transform.position);
@@ -32,6 +32,8 @@ public class RaycastGun : MonoBehaviour
             Debug.Log(hit.transform.name);
             
             trail.transform.position = hit.point;
+            GameObject onHit= Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
+            Destroy(onHit, 2f);
         }
 
         else
