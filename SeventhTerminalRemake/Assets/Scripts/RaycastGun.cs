@@ -11,10 +11,16 @@ public class RaycastGun : MonoBehaviour
     public Transform trailOrigin;
     public Transform trailTarget;
     public ParticleSystem muzzleFlash;
-    public GameObject hitEffect;
+    public HitController hitEffect;
+    public RaycastHit hit;
 
-    RaycastHit hit;
     float fireTime = 0f;
+    HitPool hitPool;
+
+    private void Start()
+    {
+        hitPool = GetComponent<HitPool>();
+    }
     // Update is called once per frame
     void Update()
     {
@@ -36,8 +42,7 @@ public class RaycastGun : MonoBehaviour
             Debug.Log(hit.transform.name);
             
             trail.transform.position = hit.point;
-            GameObject onHit= Instantiate(hitEffect, hit.point, Quaternion.LookRotation(hit.normal));
-            Destroy(onHit, 2f);
+            hitPool._pool.Get();
         }
 
         else
