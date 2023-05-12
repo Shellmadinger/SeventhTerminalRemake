@@ -5,18 +5,22 @@ using UnityEngine;
 public class RaycastGun : MonoBehaviour
 {
     public float range = 100;
+    public float fireRate = 15f;
     public TrailRenderer bulletTrail;
     public Camera fpcamera;
     public Transform trailOrigin;
     public Transform trailTarget;
     public ParticleSystem muzzleFlash;
     public GameObject hitEffect;
+
     RaycastHit hit;
+    float fireTime = 0f;
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButtonDown("Fire1"))
+        if (Input.GetButton("Fire1") && Time.time >= fireTime)
         {
+            fireTime = Time.time + 1f / fireRate;
             Fire();
         }
     }
