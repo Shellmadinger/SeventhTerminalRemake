@@ -19,6 +19,7 @@ public class RaycastGun : MonoBehaviour
 
     private void Start()
     {
+        //Get Hitpool Script
         hitPool = GetComponent<HitPool>();
     }
     // Update is called once per frame
@@ -26,6 +27,7 @@ public class RaycastGun : MonoBehaviour
     {
         if (Input.GetButton("Fire1") && Time.time >= fireTime)
         {
+            //Call Fire method when time is greater than the fire rate
             fireTime = Time.time + 1f / fireRate;
             Fire();
         }
@@ -35,18 +37,19 @@ public class RaycastGun : MonoBehaviour
     {
         muzzleFlash.Play();
 
+        //Instantiate trail wfrom gun when firing raycast
         var trail = Instantiate(bulletTrail, trailOrigin.transform.position, Quaternion.identity);
         trail.AddPosition(trailOrigin.transform.position);
         if (Physics.Raycast(fpcamera.transform.position, fpcamera.transform.forward, out hit, range))
         {
-            Debug.Log(hit.transform.name);
-            
+            //If raycast hits something, set trail to raycast. Also pull from the hitEffect pool
             trail.transform.position = hit.point;
             hitPool._pool.Get();
         }
 
         else
         {
+            //Set trail to the tailTarget game object if the raycast hit nothing
             trail.transform.position = trailTarget.transform.position;
         }
 

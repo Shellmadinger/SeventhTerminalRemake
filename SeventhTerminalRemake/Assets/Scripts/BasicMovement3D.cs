@@ -10,6 +10,7 @@ public class BasicMovement3D : MonoBehaviour
     float horiMove;
     float vertMove;
     Vector3 fullMovement;
+
     // Update is called once per frame
     void Update()
     {
@@ -18,10 +19,11 @@ public class BasicMovement3D : MonoBehaviour
 
     void Move()
     {
+        //Get x and Y axises
         horiMove = Input.GetAxis("Horizontal");
         vertMove = Input.GetAxis("Vertical");
         fullMovement = new Vector3(horiMove, 0f, vertMove);
-
+        //Move Gameobject
         Vector3 move = transform.TransformDirection(fullMovement) * speed;
         body.velocity = new Vector3(move.x, body.velocity.y, move.z);
     }
