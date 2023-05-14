@@ -6,6 +6,7 @@ public class RaycastGun : MonoBehaviour
 {
     public float range = 100;
     public float fireRate = 15f;
+    public float gunDamage = 1f;
     public TrailRenderer bulletTrail;
     public Camera fpcamera;
     public Transform trailOrigin;
@@ -45,6 +46,12 @@ public class RaycastGun : MonoBehaviour
             //If raycast hits something, set trail to raycast. Also pull from the hitEffect pool
             trail.transform.position = hit.point;
             hitPool._pool.Get();
+
+            EnemyHealth enemy= hit.transform.GetComponent<EnemyHealth>();
+            if(enemy != null)
+            {
+                enemy.TakeDamage(gunDamage);
+            }
         }
 
         else

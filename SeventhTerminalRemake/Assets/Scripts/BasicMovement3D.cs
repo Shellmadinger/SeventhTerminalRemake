@@ -5,7 +5,6 @@ using UnityEngine;
 public class BasicMovement3D : MonoBehaviour
 {
     public float speed;
-    public float health;
     public Rigidbody body;
     float horiMove;
     float vertMove;
@@ -28,19 +27,4 @@ public class BasicMovement3D : MonoBehaviour
         body.velocity = new Vector3(move.x, body.velocity.y, move.z);
     }
 
-    void GameOver()
-    {
-        if (health <= 0)
-        {
-            Destroy(gameObject);
-        }
-    }
-
-    void OnCollisionEnter(Collision collider)
-    {
-        if (collider.gameObject.tag == "Enemy")
-        {
-            health -= 1;
-        }
-    }
 }

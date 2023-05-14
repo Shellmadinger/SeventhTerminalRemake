@@ -343,9 +343,11 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/BasicMovement3D.cs"
+"Assets/Scripts/EnemyHealth.cs"
 "Assets/Scripts/HitController.cs"
 "Assets/Scripts/HitPool.cs"
 "Assets/Scripts/MouseControlledCamera.cs"
+"Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/RaycastGun.cs"
 "Assets/Scripts/Target.cs"
 -langversion:9.0
