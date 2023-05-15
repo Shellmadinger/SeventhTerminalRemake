@@ -1,11 +1,19 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class EnemyHealth : MonoBehaviour
 {
     public float health = 10f;
-    public ParticleSystem enemyKill;
+    public EnemyDeathController enemyKill;
+
+    EnemyDeathPool enemyPool;
+
+    private void Start()
+    {
+        enemyPool = GetComponent<EnemyDeathPool>();
+    }
     public void TakeDamage(float amount)
     {
         health -= amount;
@@ -17,7 +25,7 @@ public class EnemyHealth : MonoBehaviour
 
     public void Kill()
     {
-        var enemyEffect = Instantiate(enemyKill, this.transform.position, Quaternion.identity);
+        enemyPool._pool.Get();
         Destroy(gameObject);
     }
 }
