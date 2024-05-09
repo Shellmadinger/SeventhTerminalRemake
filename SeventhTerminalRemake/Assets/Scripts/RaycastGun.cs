@@ -38,7 +38,7 @@ public class RaycastGun : MonoBehaviour
     {
         muzzleFlash.Play();
 
-        //Instantiate trail wfrom gun when firing raycast
+        //Instantiate trail from gun when firing raycast
         var trail = Instantiate(bulletTrail, trailOrigin.transform.position, Quaternion.identity);
         trail.AddPosition(trailOrigin.transform.position);
         if (Physics.Raycast(fpcamera.transform.position, fpcamera.transform.forward, out hit, range))
