@@ -340,6 +340,7 @@
 -r:"Library/Bee/artifacts/1900b0aE.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/BasicMovement3D.cs"
 "Assets/Scripts/EnemyHealth.cs"
+"Assets/Scripts/GameManager.cs"
 "Assets/Scripts/MouseControlledCamera.cs"
 "Assets/Scripts/ObjectPools/EnemyDeath/EnemyDeathController.cs"
 "Assets/Scripts/ObjectPools/EnemyDeath/EnemyDeathPool.cs"
