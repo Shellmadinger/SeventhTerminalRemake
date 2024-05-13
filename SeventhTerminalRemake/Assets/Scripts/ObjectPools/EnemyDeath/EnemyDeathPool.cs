@@ -7,18 +7,18 @@ public class EnemyDeathPool : MonoBehaviour
 {
     public ObjectPool<EnemyDeathController> _pool;
 
-    private EnemyHealth enemy;
+    private EnemySpawns enemy;
     // Start is called before the first frame update
     void Start()
     {
-        enemy = GetComponent<EnemyHealth>();
-        _pool = new ObjectPool<EnemyDeathController>(CreateHitEffect, OnTakeHitEffectFromPool, OnReturnHitEffectToPool, OnDestroyHitEffect, true, 1000, 1000);
+        enemy = GetComponent<EnemySpawns>();
+        _pool = new ObjectPool<EnemyDeathController>(CreateHitEffect, OnTakeHitEffectFromPool, OnReturnHitEffectToPool, OnDestroyHitEffect, true, 10, 1000);
     }
 
     //Creating the enemy
     private EnemyDeathController CreateHitEffect()
     {
-        EnemyDeathController enemyControl = Instantiate(enemy.enemyKill, enemy.gameObject.transform.position, Quaternion.identity);
+        EnemyDeathController enemyControl = Instantiate(enemy.enemies, enemy.gameObject.transform.position, Quaternion.identity);
 
         enemyControl.SetPool(_pool);
 
@@ -36,6 +36,7 @@ public class EnemyDeathPool : MonoBehaviour
     private void OnReturnHitEffectToPool(EnemyDeathController enemyControl)
     {
         enemyControl.gameObject.SetActive(false);
+        
     }
     //What to do when destroying the enemy
     private void OnDestroyHitEffect(EnemyDeathController enemyControl)
