@@ -4882,7 +4882,7 @@ GameObject:
   - component: {fileID: 6874401848610185501}
   - component: {fileID: 6874401848610185507}
   - component: {fileID: 6874401848610185500}
-  - component: {fileID: -1368901441154111960}
+  - component: {fileID: 8537878828340990204}
   m_Layer: 0
   m_Name: EnemyKillEffect
   m_TagString: Untagged
@@ -9743,7 +9743,7 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!114 &-1368901441154111960
+--- !u!114 &8537878828340990204
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -9752,6 +9752,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 6874401848610185502}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bd87e68b920362488d124f5753b7592, type: 3}
+  m_Script: {fileID: 11500000, guid: 8b676328afcc5304ca56f6c17ccf3f07, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

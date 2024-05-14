@@ -6,14 +6,14 @@ using UnityEngine.Pool;
 public class EnemyHealth : MonoBehaviour
 {
     public float health = 10f;
-    public EnemyDeathController enemyKill;
+    public EnemyDeathEffectController enemyKill;
 
-    EnemyDeathPool enemyPool;
+    EnemyDeathEffectPool enemyPool;
 
     private void Start()
     {
         //Get enemy pool component 
-        enemyPool = GetComponent<EnemyDeathPool>();
+        enemyPool = GetComponent<EnemyDeathEffectPool>();
     }
     public void TakeDamage(float amount)
     {

@@ -12,18 +12,18 @@ public class EnemyDeathPool : MonoBehaviour
     void Start()
     {
         enemy = GetComponent<EnemyHealth>();
-        _pool = new ObjectPool<EnemyDeathController>(CreateHitEffect, OnTakeHitEffectFromPool, OnReturnHitEffectToPool, OnDestroyHitEffect, true, 1000, 1000);
+        //_pool = new ObjectPool<EnemyDeathController>(CreateHitEffect, OnTakeHitEffectFromPool, OnReturnHitEffectToPool, OnDestroyHitEffect, true, 1000, 1000);
     }
 
     //Creating the enemy
-    private EnemyDeathController CreateHitEffect()
+    /*private EnemyDeathController CreateHitEffect()
     {
         EnemyDeathController enemyControl = Instantiate(enemy.enemyKill, enemy.gameObject.transform.position, Quaternion.identity);
 
         enemyControl.SetPool(_pool);
 
         return enemyControl;
-    }
+    }*/
     //What to do after taking the enemy from the pool
     private void OnTakeHitEffectFromPool(EnemyDeathController enemyControl)
     {

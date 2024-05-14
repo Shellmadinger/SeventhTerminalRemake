@@ -6,10 +6,31 @@ using UnityEngine.Pool;
 public class EnemyDeathController : MonoBehaviour
 {
     private ObjectPool<EnemyDeathController> _pool;
-    private void OnParticleSystemStopped()
+    public float health = 10f;
+    public EnemyDeathEffectController enemyKill;
+
+    EnemyDeathEffectPool enemyPool;
+
+    private void Start()
     {
-        //Disable hit effect when it finishes going off
-        _pool.Release(this);
+        //Get enemy pool component 
+        enemyPool = GetComponent<EnemyDeathEffectPool>();
+    }
+    public void TakeDamage(float amount)
+    {
+        //Reduce health by amount, then kill the enemy when health is 0
+        health -= amount;
+        if (health <= 0)
+        {
+            Kill();
+        }
+    }
+
+    public void Kill()
+    {
+        //Get the enemy pool and destroy the gameObject
+        enemyPool._pool.Get();
+        Destroy(gameObject);
     }
 
     public void SetPool(ObjectPool<EnemyDeathController> pool)

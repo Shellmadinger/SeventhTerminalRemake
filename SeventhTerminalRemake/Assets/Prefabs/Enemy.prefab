@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5125859987284126848}
   - component: {fileID: 5125859987284126863}
   - component: {fileID: 5125859987284126862}
-  - component: {fileID: 5125859987284126851}
+  - component: {fileID: 1023703324}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -112,8 +112,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 10
-  enemyKill: {fileID: -1368901441154111960, guid: d1ff27ebcb8d7634099e48e818be9937, type: 3}
---- !u!114 &5125859987284126851
+  enemyKill: {fileID: 8537878828340990204, guid: d1ff27ebcb8d7634099e48e818be9937, type: 3}
+--- !u!114 &1023703324
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -122,6 +122,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 5125859987284126861}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 93688b6c7c800614a8a1645a9b945231, type: 3}
+  m_Script: {fileID: 11500000, guid: f7f855b8c883e7849bd057f2b6fde97c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
