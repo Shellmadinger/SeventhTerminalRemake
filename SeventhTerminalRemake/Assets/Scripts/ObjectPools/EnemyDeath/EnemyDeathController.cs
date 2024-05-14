@@ -6,11 +6,12 @@ using UnityEngine.Pool;
 public class EnemyDeathController : MonoBehaviour
 {
     private ObjectPool<EnemyDeathController> _pool;
-
-    public void EnemyHasDied()
+    private void OnParticleSystemStopped()
     {
+        //Disable hit effect when it finishes going off
         _pool.Release(this);
     }
+
     public void SetPool(ObjectPool<EnemyDeathController> pool)
     {
         //Setting up the hit effect pool
