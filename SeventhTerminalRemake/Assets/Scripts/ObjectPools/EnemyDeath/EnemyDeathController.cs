@@ -8,13 +8,15 @@ public class EnemyDeathController : MonoBehaviour
     private ObjectPool<EnemyDeathController> _pool;
     public float health = 10f;
     public EnemyDeathEffectController enemyKill;
+    public EnemySpawner enemyRelease;
 
-    EnemyDeathEffectPool enemyPool;
+    EnemyDeathEffectPool enemyEffectPool;
 
     private void Start()
     {
         //Get enemy pool component 
-        enemyPool = GetComponent<EnemyDeathEffectPool>();
+        enemyEffectPool = GetComponent<EnemyDeathEffectPool>();
+        enemyRelease = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
     }
     public void TakeDamage(float amount)
     {
@@ -22,20 +24,20 @@ public class EnemyDeathController : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
-            Kill();
+            enemyEffectPool._pool.Get();
+            enemyRelease.Kill(this);
         }
     }
 
-    public void Kill()
-    {
-        //Get the enemy pool and destroy the gameObject
-        enemyPool._pool.Get();
-        Destroy(gameObject);
-    }
 
     public void SetPool(ObjectPool<EnemyDeathController> pool)
     {
         //Setting up the hit effect pool
         _pool = pool;
+    }
+
+    private void OnDisable()
+    {
+        health = 10f;
     }
 }

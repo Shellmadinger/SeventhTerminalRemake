@@ -12,8 +12,8 @@ GameObject:
   - component: {fileID: 5125859987284126849}
   - component: {fileID: 5125859987284126848}
   - component: {fileID: 5125859987284126863}
-  - component: {fileID: 5125859987284126862}
   - component: {fileID: 1023703324}
+  - component: {fileID: 1724736139}
   m_Layer: 0
   m_Name: Enemy
   m_TagString: Enemy
@@ -99,20 +99,6 @@ SphereCollider:
   serializedVersion: 2
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5125859987284126862
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5125859987284126861}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: efa43ec7e3e66c44ba5dc14a1616f1e4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  health: 10
-  enemyKill: {fileID: 8537878828340990204, guid: d1ff27ebcb8d7634099e48e818be9937, type: 3}
 --- !u!114 &1023703324
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -125,3 +111,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f855b8c883e7849bd057f2b6fde97c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &1724736139
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5125859987284126861}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6bd87e68b920362488d124f5753b7592, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 10
+  enemyKill: {fileID: 8537878828340990204, guid: d1ff27ebcb8d7634099e48e818be9937, type: 3}
+  enemyRelease: {fileID: 0}
