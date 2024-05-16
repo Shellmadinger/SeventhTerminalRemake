@@ -7,8 +7,12 @@ public class EnemyDeathController : MonoBehaviour
 {
     private ObjectPool<EnemyDeathController> _pool;
     public float health = 10f;
+    public float speed = 10f;
+    public GameManager currentState;
     public EnemyDeathEffectController enemyKill;
     public EnemySpawner enemyRelease;
+    GameObject target;
+
 
     EnemyDeathEffectPool enemyEffectPool;
 
@@ -17,6 +21,25 @@ public class EnemyDeathController : MonoBehaviour
         //Get enemy pool component 
         enemyEffectPool = GetComponent<EnemyDeathEffectPool>();
         enemyRelease = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
+        currentState = GameObject.Find("Game Manager").GetComponent<GameManager>();
+        target = GameObject.Find("Player");
+    }
+
+    private void Update()
+    {
+        Movement();
+    }
+
+    void Movement()
+    {
+        if (currentState.gameState == 1)
+        {
+            Vector3 targetDirection = target.transform.position - transform.position;
+            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, speed * Time.deltaTime, 0.0f);
+            transform.rotation = Quaternion.LookRotation(newDirection);
+
+            transform.position += transform.forward * speed * Time.deltaTime;
+        }
     }
     public void TakeDamage(float amount)
     {
