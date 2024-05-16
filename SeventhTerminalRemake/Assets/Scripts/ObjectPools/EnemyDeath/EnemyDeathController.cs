@@ -20,6 +20,7 @@ public class EnemyDeathController : MonoBehaviour
     {
         //Get enemy pool component 
         enemyEffectPool = GetComponent<EnemyDeathEffectPool>();
+        //Get the enemy spawner, game manager and player. Since these objects are in the scene, we use find to get them
         enemyRelease = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
         currentState = GameObject.Find("Game Manager").GetComponent<GameManager>();
         target = GameObject.Find("Player");
@@ -34,6 +35,7 @@ public class EnemyDeathController : MonoBehaviour
     {
         if (currentState.gameState == 1)
         {
+            //Get the direction between enemy and player and move
             Vector3 targetDirection = target.transform.position - transform.position;
             Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, speed * Time.deltaTime, 0.0f);
             transform.rotation = Quaternion.LookRotation(newDirection);
@@ -47,6 +49,7 @@ public class EnemyDeathController : MonoBehaviour
         health -= amount;
         if (health <= 0)
         {
+            //Get the death effect from the pool and called Kill function
             enemyEffectPool._pool.Get();
             enemyRelease.Kill(this);
         }
@@ -61,6 +64,7 @@ public class EnemyDeathController : MonoBehaviour
 
     private void OnDisable()
     {
+        //Reset health when killed
         health = 10f;
     }
 }

@@ -18,9 +18,11 @@ public class GameManager : MonoBehaviour
     {
         if(gameState == 0)
         {
+            //If gamestate is 0, start the timer
             Debug.Log(timer -= Time.deltaTime % 60);
             if(timer <= 0)
             {
+                //When timer reaches 0, advance state and reset timer
                 gameState = 1;
                 timer = 3;
                

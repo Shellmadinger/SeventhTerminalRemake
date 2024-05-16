@@ -14,7 +14,7 @@ public class RaycastGun : MonoBehaviour
     public ParticleSystem muzzleFlash;
     public HitController hitEffect;
     public RaycastHit hit;
-
+    public GameManager currentState;
     float fireTime = 0f;
     HitPool hitPool;
 
@@ -26,12 +26,18 @@ public class RaycastGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetButton("Fire1") && Time.time >= fireTime)
+        //Like with other scripts, check if the game state is 1 before activating the fire button.
+        //God, there has to be a better way to do this...
+        if(currentState.gameState == 1)
         {
-            //Call Fire method when time is greater than the fire rate
-            fireTime = Time.time + 1f / fireRate;
-            Fire();
+            if (Input.GetButton("Fire1") && Time.time >= fireTime)
+            {
+                //Call Fire method when time is greater than the fire rate
+                fireTime = Time.time + 1f / fireRate;
+                Fire();
+            }
         }
+       
     }
 
     void Fire()

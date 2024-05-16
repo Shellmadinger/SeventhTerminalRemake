@@ -20,8 +20,6 @@ public class EnemyDeathPool : MonoBehaviour
     {
         EnemyDeathController enemyControl = Instantiate(enemy.enemySpawn, enemy.gameObject.transform.position, Quaternion.identity);
 
-        enemyControl.health = 10f;
-
         enemyControl.SetPool(_pool);
 
         return enemyControl;
