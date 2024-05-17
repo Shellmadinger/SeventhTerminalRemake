@@ -7,13 +7,18 @@ public class PlayerHealth : MonoBehaviour
     public float maxHealth;
     public string attackerTag;
     public float damageAmount;
+    public HealthBar healthBar;
     [SerializeField]
     float health;
+    //Rigidbody body;
 
     private void Start()
     {
         //Set health to maxHealth
         health = maxHealth;
+        //Set max health for health bar.
+        healthBar.SetMaxHealth(((int)maxHealth));
+        //body = GetComponent<Rigidbody>();
     }
 
     // Update is called once per frame
@@ -36,7 +41,11 @@ public class PlayerHealth : MonoBehaviour
         //Inflict damage when colliding with attacker
         if (collision.gameObject.tag == attackerTag)
         {
+            //Vector3 direction = (transform.position - collision.gameObject.transform.position).normalized;
+            //body.AddForce(direction * 1000, ForceMode.Impulse);
             health -= damageAmount;
+            //Change health bar
+            healthBar.SetHealth(((int)health));
         }
 
     }
