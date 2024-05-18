@@ -8,6 +8,7 @@ public class EnemyDeathPool : MonoBehaviour
     public ObjectPool<EnemyDeathController> _pool;
 
     private EnemySpawner enemy;
+    Vector3 randVec;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,10 @@ public class EnemyDeathPool : MonoBehaviour
     //Creating the enemy
     private EnemyDeathController CreateHitEffect()
     {
-        EnemyDeathController enemyControl = Instantiate(enemy.enemySpawn, enemy.gameObject.transform.position, Quaternion.identity);
+        randVec = new Vector3(Random.Range(-80, 80), Random.Range(-80, 80));
+        Debug.Log(randVec);
+        //EnemyDeathController enemyControl = Instantiate(enemy.enemySpawn, enemy.gameObject.transform.position, Quaternion.identity);
+        EnemyDeathController enemyControl = Instantiate(enemy.enemySpawn, randVec, Quaternion.identity);
 
         enemyControl.SetPool(_pool);
 
@@ -27,7 +31,9 @@ public class EnemyDeathPool : MonoBehaviour
     //What to do after taking the enemy from the pool
     private void OnTakeHitEffectFromPool(EnemyDeathController enemyControl)
     {
-        enemyControl.transform.position = enemy.gameObject.transform.position;
+        //enemyControl.transform.position = enemy.gameObject.transform.position;
+        randVec = new Vector3(Random.Range(-80, 80), Random.Range(-80, 80));
+        enemyControl.transform.position = randVec;
         enemyControl.transform.rotation = Quaternion.identity;
 
         enemyControl.gameObject.SetActive(true);

@@ -11,10 +11,11 @@ public class EnemyDeathController : MonoBehaviour
     public GameManager currentState;
     public EnemyDeathEffectController enemyKill;
     public EnemySpawner enemyRelease;
+    public ParticleSystem enemyHit;
     GameObject target;
 
-
     EnemyDeathEffectPool enemyEffectPool;
+    
 
     private void Start()
     {
@@ -47,6 +48,10 @@ public class EnemyDeathController : MonoBehaviour
     {
         //Reduce health by amount, then kill the enemy when health is 0
         health -= amount;
+        if(health> 0)
+        {
+            enemyHit.Play();
+        }
         if (health <= 0)
         {
             //Get the death effect from the pool and called Kill function
