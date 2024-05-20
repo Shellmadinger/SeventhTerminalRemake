@@ -32,6 +32,12 @@ public class MouseControlledCamera : MonoBehaviour
             transform.localRotation = Quaternion.Euler(new Vector3(rotationX, 0f, 0f));
             player.transform.Rotate(new Vector3(0f, mouseX, 0f));
         }
+
+        if(currentGameState.gameState == 2)
+        {
+            //Return cursor to normal during game over screen
+            Cursor.lockState = CursorLockMode.None;
+        }
        
     }
 }

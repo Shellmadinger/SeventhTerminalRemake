@@ -7,14 +7,11 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public int gameState = 0;
-    [SerializeField]
-    TMP_Text timerText;
-    [SerializeField]
-    float timer = 3;
-    [SerializeField]
-    float gameTimerMin;
-    [SerializeField]
-    float gameTimerSec;
+    [SerializeField] TMP_Text timerText;
+    [SerializeField] float timer = 3;
+    [SerializeField] float gameTimerMin;
+    [SerializeField] float gameTimerSec;
+    [SerializeField] PlayerHealth playerIsDead;
     float gameTimerDisplay;
 
     private void Start()
@@ -59,6 +56,10 @@ public class GameManager : MonoBehaviour
             //Send values into text
             timerText.text = gameTimerMin.ToString("0#") + ":" + gameTimerSec.ToString("0#");
             
+            if(playerIsDead.isDead == true)
+            {
+                gameState = 2;
+            }
         }
         
     }

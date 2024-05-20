@@ -8,8 +8,9 @@ public class PlayerHealth : MonoBehaviour
     public string attackerTag;
     public float damageAmount;
     public HealthBar healthBar;
-    [SerializeField]
-    float health;
+    public bool isDead = false;
+    [SerializeField] float health;
+    [SerializeField] GameObject gunModel;
     //Rigidbody body;
 
     private void Start()
@@ -24,15 +25,18 @@ public class PlayerHealth : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        GameOver();
+        PlayerHasDied();
     }
 
-    void GameOver()
+    void PlayerHasDied()
     {
         if (health <= 0)
         {
-            //Kill player if they are below 0 health
-            Debug.Log("You died idiot");
+            //Kill player if they git 0 health
+            isDead = true;
+            //Disable gun model when health is 0. This is mainly a workaround to destroying the player object
+            //as doing that would also destroy the camera.
+            gunModel.gameObject.SetActive(false);
         }
     }
 
