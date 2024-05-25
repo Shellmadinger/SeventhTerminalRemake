@@ -60,6 +60,19 @@ public class EnemyDeathController : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Player")
+        {
+            enemyEffectPool._pool.Get();
+            enemyRelease.Kill(this);
+            Vector3 dir = (collision.transform.position - transform.position).normalized;
+            Vector3 knockBack = dir * 100f;
+            Rigidbody collideBody = collision.gameObject.GetComponent<Rigidbody>();
+            collideBody.velocity = new Vector3((collideBody.velocity.x+1)*knockBack.x, collideBody.velocity.y*knockBack.y, (collideBody.velocity.z+1)*knockBack.z);
+        }
+    }
+
 
     public void SetPool(ObjectPool<EnemyDeathController> pool)
     {

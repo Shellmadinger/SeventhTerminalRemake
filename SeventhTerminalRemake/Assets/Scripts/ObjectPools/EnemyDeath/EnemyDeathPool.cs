@@ -32,7 +32,7 @@ public class EnemyDeathPool : MonoBehaviour
     private void OnTakeHitEffectFromPool(EnemyDeathController enemyControl)
     {
         //enemyControl.transform.position = enemy.gameObject.transform.position;
-        randVec = new Vector3(Random.Range(-80, 80), Random.Range(-80, 80));
+        randVec = new Vector3(Random.Range(-5, -180), Random.Range(-3,2), Random.Range(27,170));
         enemyControl.transform.position = randVec;
         enemyControl.transform.rotation = Quaternion.identity;
 

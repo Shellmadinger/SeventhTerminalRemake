@@ -12,7 +12,7 @@ public class BasicMovement3D : MonoBehaviour
     Vector3 fullMovement;
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         Move();
     }
@@ -29,6 +29,7 @@ public class BasicMovement3D : MonoBehaviour
             //Move Gameobject
             Vector3 move = transform.TransformDirection(fullMovement) * speed;
             body.velocity = new Vector3(move.x, body.velocity.y, move.z);
+           
         }
        
     }
