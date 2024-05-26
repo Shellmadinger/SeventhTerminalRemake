@@ -20843,6 +20843,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 2080152957713261937, guid: f2bb1a7159501d5428ca18b96d218c13, type: 3}
     - target: {fileID: 4254285861973521432, guid: 7592d59370b576e47935b9b5abb44841, type: 3}
+      propertyPath: overHeatMax
+      value: 500
+      objectReference: {fileID: 0}
+    - target: {fileID: 4254285861973521432, guid: 7592d59370b576e47935b9b5abb44841, type: 3}
       propertyPath: currentState
       value: 
       objectReference: {fileID: 458250647}
