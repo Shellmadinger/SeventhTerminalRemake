@@ -28,6 +28,15 @@ public class PlayerHealth : MonoBehaviour
         PlayerHasDied();
     }
 
+    void ReduceHealth()
+    {
+        //Vector3 direction = (transform.position - collision.gameObject.transform.position).normalized;
+        //body.AddForce(direction * 1000, ForceMode.Impulse);
+        health -= damageAmount;
+        //Change health bar
+        healthBar.SetHealth(((int)health));
+    }
+
     void PlayerHasDied()
     {
         if (health <= 0)
@@ -42,15 +51,18 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Inflict damage when colliding with attacker
-        if (collision.gameObject.tag == attackerTag)
+        if(collision.gameObject.tag == attackerTag)
         {
-            //Vector3 direction = (transform.position - collision.gameObject.transform.position).normalized;
-            //body.AddForce(direction * 1000, ForceMode.Impulse);
-            health -= damageAmount;
-            //Change health bar
-            healthBar.SetHealth(((int)health));
+            ReduceHealth();
         }
-
     }
+
+    /*private void OnControllerColliderHit(ControllerColliderHit hit)
+    {
+        //Inflict damage when colliding with attacker
+        if(hit.gameObject.tag == attackerTag)
+        {
+            ReduceHealth();
+        }
+    }*/
 }
