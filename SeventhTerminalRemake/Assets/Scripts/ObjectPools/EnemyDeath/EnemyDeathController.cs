@@ -64,15 +64,20 @@ public class EnemyDeathController : MonoBehaviour
     {
         if(collision.gameObject.tag == "Player")
         {
+            //When colliding with the player, kill the enemy and get the death effect
+
             enemyEffectPool._pool.Get();
             enemyRelease.Kill(this);
-            Vector3 dir = (collision.transform.position - transform.position).normalized;
-            Vector3 knockBack = dir * 100f;
-            Rigidbody collideBody = collision.gameObject.GetComponent<Rigidbody>();
-            collideBody.velocity = new Vector3((collideBody.velocity.x+1)*knockBack.x, collideBody.velocity.y*knockBack.y, (collideBody.velocity.z+1)*knockBack.z);
+
+            //Vector3 dir = (collision.transform.position - transform.position).normalized;
+            //float knockBack = 100;
+            //collision.gameObject.GetComponent<Rigidbody>().AddForce(dir*knockBack, ForceMode.Impulse);
+            //OnKnockBack(collision.gameObject.GetComponent<Rigidbody>(), collision.gameObject);
+
+            //Set isKnockedBack to true
+            collision.gameObject.GetComponent<KnockBack>().isKnockedBack = true;
         }
     }
-
 
     public void SetPool(ObjectPool<EnemyDeathController> pool)
     {
