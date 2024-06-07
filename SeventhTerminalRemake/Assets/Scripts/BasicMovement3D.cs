@@ -18,7 +18,6 @@ public class BasicMovement3D : MonoBehaviour
     void FixedUpdate()
     {
         Move();
-        Debug.Log(gravity);
     }
 
     void Move()

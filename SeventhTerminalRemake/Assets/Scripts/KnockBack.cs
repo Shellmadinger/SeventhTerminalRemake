@@ -5,6 +5,7 @@ using UnityEngine;
 public class KnockBack : MonoBehaviour
 {
     public bool isKnockedBack = false;
+    public Vector3 direction;
     [SerializeField] Rigidbody playerBody;
     [SerializeField] float timer = 1;
     // Start is called before the first frame update
@@ -12,10 +13,11 @@ public class KnockBack : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        OnKnockBack();
+        OnKnockBack(direction);
     }
 
-    void OnKnockBack()
+
+    public void OnKnockBack(Vector3 dir)
     {
         //I've mentioned having really stupid solutions to thing in the past, but this one takes the cake
         //Since the knock back kept being really short no matter what I do, I surmised that the knock back needed be in update
@@ -23,7 +25,7 @@ public class KnockBack : MonoBehaviour
         if (isKnockedBack == true)
         {
             //When isKnockback is true, apply force, then start timer
-            playerBody.AddForce((transform.forward*2)*-1, ForceMode.Impulse);
+            playerBody.AddForce(dir*0.25f, ForceMode.Impulse);
             timer -= Time.deltaTime;
             Debug.Log(timer);
             if (timer < 0)
