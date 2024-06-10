@@ -70,10 +70,6 @@ public class EnemyDeathController : MonoBehaviour
             enemyRelease.Kill(this);
 
             Vector3 dir = (collision.transform.position - transform.position).normalized;
-            //float knockBack = 100;
-            //collision.gameObject.GetComponent<Rigidbody>().AddForce(dir*knockBack, ForceMode.Impulse);
-            //OnKnockBack(collision.gameObject.GetComponent<Rigidbody>(), collision.gameObject);
-
             //Set isKnockedBack to true
             collision.gameObject.GetComponent<KnockBack>().isKnockedBack = true;
             collision.gameObject.GetComponent<KnockBack>().direction = dir;

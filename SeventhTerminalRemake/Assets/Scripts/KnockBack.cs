@@ -7,7 +7,7 @@ public class KnockBack : MonoBehaviour
     public bool isKnockedBack = false;
     public Vector3 direction;
     [SerializeField] Rigidbody playerBody;
-    [SerializeField] float timer = 1;
+    [SerializeField] float timer = 0.3f;
     // Start is called before the first frame update
 
     // Update is called once per frame
@@ -25,7 +25,7 @@ public class KnockBack : MonoBehaviour
         if (isKnockedBack == true)
         {
             //When isKnockback is true, apply force, then start timer
-            playerBody.AddForce(dir*0.25f, ForceMode.Impulse);
+            playerBody.AddForce(dir*1f, ForceMode.Impulse);
             timer -= Time.deltaTime;
             Debug.Log(timer);
             if (timer < 0)
@@ -33,7 +33,7 @@ public class KnockBack : MonoBehaviour
                 //When timer hits 0, reset everything
                 isKnockedBack = false;
                 playerBody.velocity = Vector3.zero;
-                timer = 1;
+                timer = 0.3f;
             }
         }
     }

@@ -20879,6 +20879,10 @@ PrefabInstance:
       value: 50
       objectReference: {fileID: 0}
     - target: {fileID: 4254285863118219904, guid: 7592d59370b576e47935b9b5abb44841, type: 3}
+      propertyPath: knockBackBool
+      value: 
+      objectReference: {fileID: 1342814629}
+    - target: {fileID: 4254285863118219904, guid: 7592d59370b576e47935b9b5abb44841, type: 3}
       propertyPath: currentGameState
       value: 
       objectReference: {fileID: 458250647}
@@ -31471,8 +31475,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isKnockedBack: 0
+  direction: {x: 0, y: 0, z: 0}
   playerBody: {fileID: 1342814627}
-  timer: 1
+  timer: 0.3
 --- !u!1 &1346459992
 GameObject:
   m_ObjectHideFlags: 0

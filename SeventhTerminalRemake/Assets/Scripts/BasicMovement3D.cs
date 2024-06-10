@@ -8,6 +8,7 @@ public class BasicMovement3D : MonoBehaviour
     public GameManager currentGameState;
     public float gravityFactor;
     public Rigidbody body;
+    [SerializeField] KnockBack knockBackBool;
     float horiMove;
     float vertMove;
     float gravity;
@@ -23,10 +24,12 @@ public class BasicMovement3D : MonoBehaviour
     void Move()
     {
         //Check if the current game state is 1, which is when actual gameplay should start
-        if(currentGameState.gameState == 1)
+        if (currentGameState.gameState == 1)
         {
             //reduce gravity by gravity factor
             gravity -= gravityFactor * Time.deltaTime;
+            //Make gravity zero is grounded
+            if (isGrounded == true) { gravity = 0; }
             //Get x and Y axises
             horiMove = Input.GetAxis("Horizontal");
             vertMove = Input.GetAxis("Vertical");
@@ -34,17 +37,14 @@ public class BasicMovement3D : MonoBehaviour
             //Move Gameobject
             Vector3 move = transform.TransformDirection(fullMovement) * speed;
             body.velocity = new Vector3(move.x, gravity, move.z);
-            //Make gravity zero is grounded
-            if(isGrounded == true) { gravity = 0; }
-           
         }
-       
+
     }
 
     //Collision checks for isGrounded
     private void OnCollisionEnter(Collision collision)
     {
-        if(collision.gameObject.tag == "Ground") {isGrounded = true;}
+        if (collision.gameObject.tag == "Ground") { isGrounded = true; }
     }
 
     private void OnCollisionStay(Collision collision)
@@ -54,7 +54,7 @@ public class BasicMovement3D : MonoBehaviour
 
     private void OnCollisionExit(Collision collision)
     {
-        if (collision.gameObject.tag == "Ground") { isGrounded = false;}
+        if (collision.gameObject.tag == "Ground") { isGrounded = false; }
     }
 
 }
