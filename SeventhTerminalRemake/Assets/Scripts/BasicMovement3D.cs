@@ -11,6 +11,7 @@ public class BasicMovement3D : MonoBehaviour
     [SerializeField] KnockBack knockBackBool;
     float horiMove;
     float vertMove;
+    float jump;
     float gravity;
     Vector3 fullMovement;
     bool isGrounded;
@@ -19,6 +20,8 @@ public class BasicMovement3D : MonoBehaviour
     void FixedUpdate()
     {
         Move();
+
+        
     }
 
     void Move()
@@ -37,6 +40,13 @@ public class BasicMovement3D : MonoBehaviour
             //Move Gameobject
             Vector3 move = transform.TransformDirection(fullMovement) * speed;
             body.velocity = new Vector3(move.x, gravity, move.z);
+
+            if (Input.GetButton("Jump") && isGrounded == true)
+            {
+                //Vector3 jumpForce = Vector3.up * 100f;
+                body.velocity = body.velocity + Vector3.up * (gravity - Physics.gravity.y) * 1000 * Time.deltaTime;
+                Debug.Log(body.velocity);
+            }
         }
 
     }

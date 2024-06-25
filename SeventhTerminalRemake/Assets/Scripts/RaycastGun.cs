@@ -16,6 +16,7 @@ public class RaycastGun : MonoBehaviour
     public HitController hitEffect;
     public RaycastHit hit;
     public GameManager currentState;
+    public HealthBar overHeatMeter;
     [SerializeField] float overHeat = 0f;
     float fireTime = 0f;
     bool isFiring;
@@ -90,6 +91,7 @@ public class RaycastGun : MonoBehaviour
     {
         //A lot of ifs here, but they are necessary for this mechanic to work.
         //If the gun is NOT firing and NOT overheating currently, decrease the overheat gauge to 0;
+        overHeatMeter.SetHealth((int)overHeat);
         if (isFiring == false && isOverHeating == false)
         {
             overHeat -= 2f;
