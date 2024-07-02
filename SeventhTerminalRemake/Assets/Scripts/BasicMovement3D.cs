@@ -45,12 +45,10 @@ public class BasicMovement3D : MonoBehaviour
                 {
                     //Vector3 jumpForce = Vector3.up * 100f;
                     body.velocity += (Vector3.up * Physics.gravity.y * (gravityOnJump - 1) * Time.deltaTime) * -1;
-                    Debug.Log(body.velocity);
                 }
                 
             }
 
-            Debug.Log(Physics.gravity);
         }
 
     }

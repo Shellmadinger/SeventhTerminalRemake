@@ -8,6 +8,8 @@ public class EnemySpawner : MonoBehaviour
     public float timeToSpawn;
     [SerializeField] GameManager currentState;
     [SerializeField] float timer;
+    float dynamicEnemyHealth = 5f;
+    float objectPullCount = 1;
     EnemyDeathPool enemyPool;
     float timeElapsedMin;
     float internalTimer;
@@ -36,20 +38,39 @@ public class EnemySpawner : MonoBehaviour
             //This is also why the timer even works to begin with. This is the stupidest solution to a problem I have ever used during my time with Unity
             //Why?
             internalTimer += Time.deltaTime;
-            timeElapsedMin = Mathf.FloorToInt(internalTimer / 60);// convert internalTimer to minutes
+            timeElapsedMin = Mathf.FloorToInt(internalTimer / 60)+2;// convert internalTimer to minutes
             timeToSpawn = 4 / (1 + timeElapsedMin)+1; //Formula that increases spawn frequency after every minute
             timer += Time.deltaTime % 60; //Also run another timer that's converted into seconds
             if (timer >= timeToSpawn)
             {
                 timer = 0f;
-                enemySpawn.health = 10f;
-                enemyPool._pool.Get();
+
+                //a for loop meant for pull multiple objects at once
+                for (int i = 0; i < objectPullCount; i++)
+                {
+                    enemySpawn.health = dynamicEnemyHealth;
+                    enemyPool._pool.Get();
+                }
+
+                if (timeElapsedMin == 1)
+                {
+                    //at one minute, we set objectPullCount to 2 and start spawning 2 objects at the same time.
+                    objectPullCount = 2;
+                }
+
+                if (timeElapsedMin == 2)
+                {
+                    dynamicEnemyHealth = 10f;
+                    //enemySpawn.GetComponent<Renderer>().sharedMaterial.SetColor("_Color", Color.blue);
+                }
+
             }
 
             if (timeToSpawn < 2)
             {
                 timeToSpawn = 2; //Cap timeToSpawn so that we aren't machine gunning enemies.
             }
+            
         }
     }
 
