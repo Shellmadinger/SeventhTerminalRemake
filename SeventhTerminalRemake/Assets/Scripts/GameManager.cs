@@ -7,6 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public int gameState = 0;
+    [SerializeField] TMP_Text countDownText;
     [SerializeField] TMP_Text timerText;
     [SerializeField] float timer = 3;
     [SerializeField] float gameTimerMin;
@@ -18,6 +19,7 @@ public class GameManager : MonoBehaviour
     {
         //Set timer on start
         timerText.text = "00:00";
+       
     }
 
     // Update is called once per frame
@@ -31,11 +33,16 @@ public class GameManager : MonoBehaviour
     {
         if(gameState == 0)
         {
+            countDownText.gameObject.SetActive(true);
             //If gamestate is 0, start the timer
-            Debug.Log(timer -= Time.deltaTime % 60);
+            timer -= Time.deltaTime % 60;
+            countDownText.text = timer.ToString("#");
+            //Debug.Log(timer);
+           
             if(timer <= 0)
             {
                 //When timer reaches 0, advance state and reset timer
+                countDownText.gameObject.SetActive(false);
                 gameState = 1;
                 timer = 3;
                

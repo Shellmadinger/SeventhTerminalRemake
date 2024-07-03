@@ -58,12 +58,6 @@ public class EnemySpawner : MonoBehaviour
                     objectPullCount = 2;
                 }
 
-                if (timeElapsedMin == 2)
-                {
-                    dynamicEnemyHealth = 10f;
-                    //enemySpawn.GetComponent<Renderer>().sharedMaterial.SetColor("_Color", Color.blue);
-                }
-
             }
 
             if (timeToSpawn < 2)
