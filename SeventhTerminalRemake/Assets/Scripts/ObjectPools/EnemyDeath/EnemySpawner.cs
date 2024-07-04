@@ -5,12 +5,13 @@ using UnityEngine;
 public class EnemySpawner : MonoBehaviour
 {
     public EnemyDeathController enemySpawn;
+    public EnemyDeathPool enemyPool;
     public float timeToSpawn;
     [SerializeField] GameManager currentState;
     [SerializeField] float timer;
     float dynamicEnemyHealth = 5f;
     float objectPullCount = 1;
-    EnemyDeathPool enemyPool;
+   
     float timeElapsedMin;
     float internalTimer;
     // Start is called before the first frame update

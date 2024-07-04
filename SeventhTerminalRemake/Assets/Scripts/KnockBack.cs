@@ -27,7 +27,7 @@ public class KnockBack : MonoBehaviour
             //When isKnockback is true, apply force, then start timer
             playerBody.AddForce(dir*1f, ForceMode.Impulse);
             timer -= Time.deltaTime;
-            Debug.Log(timer);
+            //Debug.Log(timer);
             if (timer < 0)
             {
                 //When timer hits 0, reset everything

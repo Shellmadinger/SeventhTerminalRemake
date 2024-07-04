@@ -6,12 +6,14 @@ using UnityEngine.Pool;
 public class EnemyDeathController : MonoBehaviour
 {
     private ObjectPool<EnemyDeathController> _pool;
+    public VirusInstance virus;
     public float health = 10f;
     public float speed = 10f;
     public GameManager currentState;
     public EnemyDeathEffectController enemyKill;
     public EnemySpawner enemyRelease;
     public ParticleSystem enemyHit;
+    [SerializeField] bool isTrojanHorse;
     GameObject target;
 
     EnemyDeathEffectPool enemyEffectPool;
@@ -19,6 +21,7 @@ public class EnemyDeathController : MonoBehaviour
 
     private void Start()
     {
+        virus.virusHealth = virus.virusMaxHealth;
         //Get enemy pool component 
         enemyEffectPool = GetComponent<EnemyDeathEffectPool>();
         //Get the enemy spawner, game manager and player. Since these objects are in the scene, we use find to get them
@@ -38,22 +41,28 @@ public class EnemyDeathController : MonoBehaviour
         {
             //Get the direction between enemy and player and move
             Vector3 targetDirection = target.transform.position - transform.position;
-            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, speed * Time.deltaTime, 0.0f);
+            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, virus.virusSpeed * Time.deltaTime, 0.0f);
             transform.rotation = Quaternion.LookRotation(newDirection);
 
-            transform.position += transform.forward * speed * Time.deltaTime;
+            transform.position += transform.forward * virus.virusSpeed * Time.deltaTime;
         }
     }
     public void TakeDamage(float amount)
     {
         //Reduce health by amount, then kill the enemy when health is 0
-        health -= amount;
-        if(health> 0)
+        virus.virusHealth -= amount;
+        if(virus.virusHealth> 0)
         {
             enemyHit.Play();
         }
-        if (health <= 0)
+        if (virus.virusHealth <= 0)
         {
+            if(isTrojanHorse == true)
+            {
+                TrojanHorseBehaviour trojanDeath = GetComponent<TrojanHorseBehaviour>();
+                trojanDeath.SpawnMalware();
+            }
+
             //Get the death effect from the pool and called Kill function
             enemyEffectPool._pool.Get();
             enemyRelease.Kill(this);
@@ -85,6 +94,6 @@ public class EnemyDeathController : MonoBehaviour
     private void OnDisable()
     {
         //Reset health when killed
-        health = 10f;
+        virus.virusHealth = virus.virusMaxHealth;
     }
 }

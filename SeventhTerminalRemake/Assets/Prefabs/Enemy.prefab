@@ -5007,6 +5007,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6bd87e68b920362488d124f5753b7592, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  virus: {fileID: 11400000, guid: d57eff958b0f52c45969acfbeef603ed, type: 2}
   health: 5
   speed: 15
   currentState: {fileID: 0}
