@@ -9,7 +9,6 @@ public class EnemySpawner : MonoBehaviour
     public float timeToSpawn;
     [SerializeField] GameManager currentState;
     [SerializeField] float timer;
-    float dynamicEnemyHealth = 5f;
     float objectPullCount = 1;
    
     float timeElapsedMin;
@@ -49,7 +48,6 @@ public class EnemySpawner : MonoBehaviour
                 //a for loop meant for pull multiple objects at once
                 for (int i = 0; i < objectPullCount; i++)
                 {
-                    enemySpawn.health = dynamicEnemyHealth;
                     enemyPool._pool.Get();
                 }
 

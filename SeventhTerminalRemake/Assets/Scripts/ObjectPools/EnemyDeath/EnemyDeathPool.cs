@@ -6,7 +6,7 @@ using UnityEngine.Pool;
 public class EnemyDeathPool : MonoBehaviour
 {
     public ObjectPool<EnemyDeathController> _pool;
-
+    public ObjectPool<TrojanHorseBehaviour> _trojanHorsePool;
     private EnemySpawner enemy;
     Vector3 randVec;
     // Start is called before the first frame update
@@ -19,11 +19,10 @@ public class EnemyDeathPool : MonoBehaviour
     //Creating the enemy
     private EnemyDeathController CreateHitEffect()
     {
-        randVec = new Vector3(Random.Range(-80, 80), Random.Range(-80, 80));
-        Debug.Log(randVec);
+        //randVec = new Vector3(Random.Range(-80, 80), Random.Range(-80, 80));
+        
         //EnemyDeathController enemyControl = Instantiate(enemy.enemySpawn, enemy.gameObject.transform.position, Quaternion.identity);
         EnemyDeathController enemyControl = Instantiate(enemy.enemySpawn, randVec, Quaternion.identity);
-
         enemyControl.SetPool(_pool);
 
         return enemyControl;
@@ -32,6 +31,7 @@ public class EnemyDeathPool : MonoBehaviour
     private void OnTakeHitEffectFromPool(EnemyDeathController enemyControl)
     {
         //enemyControl.transform.position = enemy.gameObject.transform.position;
+        Debug.Log(randVec);
         randVec = new Vector3(Random.Range(-5, -180), Random.Range(-3,2), Random.Range(27,170));
         enemyControl.transform.position = randVec;
         enemyControl.transform.rotation = Quaternion.identity;

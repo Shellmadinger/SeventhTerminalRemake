@@ -43218,32 +43218,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f7f855b8c883e7849bd057f2b6fde97c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1886535598
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1886535596}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6bd87e68b920362488d124f5753b7592, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  virus: {fileID: 11400000, guid: 954e366c363e20b4697b90e90be4cd2f, type: 2}
-  health: 10
-  speed: 10
-  currentState: {fileID: 0}
-  enemyKill: {fileID: 8537878828340990204, guid: d1ff27ebcb8d7634099e48e818be9937, type: 3}
-  enemyRelease: {fileID: 0}
-  enemyHit: {fileID: 992122233}
-  isTrojanHorse: 1
 --- !u!4 &1886535599 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 908175499392636374, guid: ab30b63608c98854bb5011d09030e850, type: 3}
   m_PrefabInstance: {fileID: 1886535595}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1886535603
+--- !u!114 &1886535607
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -43255,8 +43235,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0be0c496ff210fb4d86a43b4ea8da5d8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  malwareSpawns: {fileID: 0}
-  trojanHorse: {fileID: 1886535598}
+  virus: {fileID: 11400000, guid: 954e366c363e20b4697b90e90be4cd2f, type: 2}
+  currentState: {fileID: 0}
+  enemyHit: {fileID: 992122233}
+  malwareSpawns: {fileID: 5125859987284126861, guid: b294d92debf2e4a418bc022669b6d9ce, type: 3}
 --- !u!1 &1896943061
 GameObject:
   m_ObjectHideFlags: 0

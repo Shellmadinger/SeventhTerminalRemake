@@ -57,12 +57,6 @@ public class EnemyDeathController : MonoBehaviour
         }
         if (virus.virusHealth <= 0)
         {
-            if(isTrojanHorse == true)
-            {
-                TrojanHorseBehaviour trojanDeath = GetComponent<TrojanHorseBehaviour>();
-                trojanDeath.SpawnMalware();
-            }
-
             //Get the death effect from the pool and called Kill function
             enemyEffectPool._pool.Get();
             enemyRelease.Kill(this);
@@ -83,6 +77,11 @@ public class EnemyDeathController : MonoBehaviour
             collision.gameObject.GetComponent<KnockBack>().isKnockedBack = true;
             collision.gameObject.GetComponent<KnockBack>().direction = dir;
         }
+    }
+
+    void TrojanHorseBehaviour()
+    {
+        
     }
 
     public void SetPool(ObjectPool<EnemyDeathController> pool)
