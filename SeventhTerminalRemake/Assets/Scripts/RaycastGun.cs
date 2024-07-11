@@ -72,10 +72,10 @@ public class RaycastGun : MonoBehaviour
             trail.transform.position = hit.point;
             hitPool._pool.Get();
 
-            EnemyDeathController enemy= hit.transform.GetComponent<EnemyDeathController>();
-            if(enemy != null)
+            IDamageable dealDamage= hit.transform.GetComponent<IDamageable>();
+            if(dealDamage != null)
             {
-                enemy.TakeDamage(gunDamage);
+                dealDamage.Damage(gunDamage);
             }
         }
 

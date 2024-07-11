@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class EnemyDeathController : MonoBehaviour
+public class EnemyDeathController : MonoBehaviour, IDamageable
 {
     private ObjectPool<EnemyDeathController> _pool;
     public VirusInstance virus;
@@ -63,6 +63,11 @@ public class EnemyDeathController : MonoBehaviour
         }
     }
 
+    public void Damage(float damageAmount)
+    {
+        TakeDamage(damageAmount);
+    }
+
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.tag == "Player")
@@ -77,11 +82,6 @@ public class EnemyDeathController : MonoBehaviour
             collision.gameObject.GetComponent<KnockBack>().isKnockedBack = true;
             collision.gameObject.GetComponent<KnockBack>().direction = dir;
         }
-    }
-
-    void TrojanHorseBehaviour()
-    {
-        
     }
 
     public void SetPool(ObjectPool<EnemyDeathController> pool)

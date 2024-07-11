@@ -1,9 +1,11 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Pool;
 
 public class TrojanHorseBehaviour : MonoBehaviour, IDamageable
 {
+    private ObjectPool<TrojanHorseBehaviour> _pool;
     public VirusInstance virus;
     //public float health = 10f;
     //public float speed = 10f;
@@ -71,6 +73,11 @@ public class TrojanHorseBehaviour : MonoBehaviour, IDamageable
     public void Damage(float damageAmount)
     {
         TakeDamage(damageAmount);
+    }
+
+    public void SetPool(ObjectPool<TrojanHorseBehaviour> pool)
+    {
+        _pool = pool;
     }
 
     private void OnCollisionEnter(Collision collision)
