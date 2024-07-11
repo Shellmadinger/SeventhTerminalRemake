@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: TrojanHorse
   m_EditorClassIdentifier: 
   virusHealth: 0
-  virusMaxHealth: 50
+  virusMaxHealth: 1
   virusSpeed: 5

@@ -3,14 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Pool;
 
-public class TrojanHorseBehaviour : MonoBehaviour, IDamageable
+public class TrojanController : MonoBehaviour, IDamageable
 {
-    private ObjectPool<TrojanHorseBehaviour> _pool;
+    private ObjectPool<TrojanController> _pool;
     public VirusInstance virus;
     //public float health = 10f;
     //public float speed = 10f;
     public GameManager currentState;
-   // public EnemyDeathEffectController enemyKill;
+    public EnemyDeathEffectController enemyKill;
     ///public EnemySpawner enemyRelease;
     public ParticleSystem enemyHit;
     [SerializeField] GameObject malwareSpawns;
@@ -65,7 +65,7 @@ public class TrojanHorseBehaviour : MonoBehaviour, IDamageable
             }
 
             //Get the death effect from the pool and called Kill function
-            //enemyEffectPool._pool.Get();
+            enemyEffectPool._pool.Get();
             Destroy(this);
         }
     }
@@ -75,7 +75,7 @@ public class TrojanHorseBehaviour : MonoBehaviour, IDamageable
         TakeDamage(damageAmount);
     }
 
-    public void SetPool(ObjectPool<TrojanHorseBehaviour> pool)
+    public void SetPool(ObjectPool<TrojanController> pool)
     {
         _pool = pool;
     }
