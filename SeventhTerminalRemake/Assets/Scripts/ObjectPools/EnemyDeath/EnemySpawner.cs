@@ -6,6 +6,7 @@ public class EnemySpawner : MonoBehaviour
 {
     public EnemyDeathController enemySpawn;
     public EnemyDeathPool enemyPool;
+    public TrojanHorsePool trojanHorse;
     public float timeToSpawn;
     [SerializeField] GameManager currentState;
     [SerializeField] float timer;
@@ -48,7 +49,7 @@ public class EnemySpawner : MonoBehaviour
                 //a for loop meant for pull multiple objects at once
                 for (int i = 0; i < objectPullCount; i++)
                 {
-                    enemyPool._pool.Get();
+                    trojanHorse._pool.Get();
                 }
 
                 if (timeElapsedMin == 1)
@@ -73,5 +74,11 @@ public class EnemySpawner : MonoBehaviour
         //Realistically, this should be handled by Gamemanager, but it only works when it's in EnemySpawner and I'm not wasting time messing with that
         //Even then, it makes some sense for this to be here, right?
         enemyPool._pool.Release(enemySpawn);
+    }
+
+    public void KillTrojan(TrojanController trojanHorseReleased)
+    {
+        trojanHorse._pool.Release(trojanHorseReleased);
+
     }
 }

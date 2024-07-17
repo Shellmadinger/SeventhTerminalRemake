@@ -65,7 +65,8 @@ public class TrojanController : MonoBehaviour, IDamageable
             }
 
             //Get the death effect from the pool and called Kill function
-            enemyEffectPool._pool.Get();
+            //enemyEffectPool._pool.Get();
+            this.gameObject.SetActive(false);
             Destroy(this);
         }
     }
