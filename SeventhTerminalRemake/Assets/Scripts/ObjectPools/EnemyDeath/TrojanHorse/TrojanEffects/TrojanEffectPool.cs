@@ -5,19 +5,20 @@ using UnityEngine.Pool;
 public class TrojanEffectPool : MonoBehaviour
 {
     public ObjectPool<EnemyDeathEffectController> _pool;
+    [SerializeField] EnemyDeathEffectController deathEffect;
 
-    private EnemyDeathController enemy;
+    private TrojanController enemy;
     // Start is called before the first frame update
     void Start()
     {
-        enemy = GetComponent<EnemyDeathController>();
+        enemy = GetComponent<TrojanController>();
         _pool = new ObjectPool<EnemyDeathEffectController>(CreateHitEffect, OnTakeHitEffectFromPool, OnReturnHitEffectToPool, OnDestroyHitEffect, true, 1000, 1000);
     }
 
     //Creating the enemy
     private EnemyDeathEffectController CreateHitEffect()
     {
-        EnemyDeathEffectController enemyControl = Instantiate(enemy.enemyKill, enemy.gameObject.transform.position, Quaternion.identity);
+        EnemyDeathEffectController enemyControl = Instantiate(deathEffect, enemy.gameObject.transform.position, Quaternion.identity);
 
         enemyControl.SetPool(_pool);
 

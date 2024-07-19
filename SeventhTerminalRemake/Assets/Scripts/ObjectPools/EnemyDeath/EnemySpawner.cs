@@ -4,13 +4,11 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
-    public EnemyDeathController enemySpawn;
-    public EnemyDeathPool enemyPool;
-    public TrojanHorsePool trojanHorse;
+    public EnemyDeathPool malwarePool;
+    public TrojanHorsePool trojanHorsePool;
     public float timeToSpawn;
     [SerializeField] GameManager currentState;
     [SerializeField] float timer;
-    float objectPullCount = 1;
    
     float timeElapsedMin;
     float internalTimer;
@@ -18,7 +16,7 @@ public class EnemySpawner : MonoBehaviour
     void Start()
     {
         //Get Enemeypool
-        enemyPool = GetComponent<EnemyDeathPool>();
+        malwarePool = GetComponent<EnemyDeathPool>();
     }
 
     // Update is called once per frame
@@ -45,17 +43,16 @@ public class EnemySpawner : MonoBehaviour
             if (timer >= timeToSpawn)
             {
                 timer = 0f;
-
-                //a for loop meant for pull multiple objects at once
-                for (int i = 0; i < objectPullCount; i++)
+                int percentageSpawning = Random.Range(1, 100);
+                Debug.Log(percentageSpawning);
+                if (percentageSpawning >= 5f)
                 {
-                    trojanHorse._pool.Get();
+                    malwarePool._pool.Get();
                 }
 
-                if (timeElapsedMin == 1)
+                if (percentageSpawning >= 95f)
                 {
-                    //at one minute, we set objectPullCount to 2 and start spawning 2 objects at the same time.
-                    objectPullCount = 2;
+                    trojanHorsePool._pool.Get();
                 }
 
             }
@@ -73,12 +70,13 @@ public class EnemySpawner : MonoBehaviour
         //Release enemies from the pool when they die
         //Realistically, this should be handled by Gamemanager, but it only works when it's in EnemySpawner and I'm not wasting time messing with that
         //Even then, it makes some sense for this to be here, right?
-        enemyPool._pool.Release(enemySpawn);
+        malwarePool._pool.Release(enemySpawn);
     }
 
     public void KillTrojan(TrojanController trojanHorseReleased)
     {
-        trojanHorse._pool.Release(trojanHorseReleased);
+        //Kill method fot TrojanHorse
+        trojanHorsePool._pool.Release(trojanHorseReleased);
 
     }
 }

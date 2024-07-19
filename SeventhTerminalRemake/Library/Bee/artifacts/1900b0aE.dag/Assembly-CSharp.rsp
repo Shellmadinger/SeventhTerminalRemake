@@ -355,7 +355,6 @@
 "Assets/Scripts/ObjectPools/EnemyDeath/Malware/MalwareEffects/EnemyDeathEffectPool.cs"
 "Assets/Scripts/ObjectPools/EnemyDeath/Malware/MalwareEntity/EnemyDeathController.cs"
 "Assets/Scripts/ObjectPools/EnemyDeath/Malware/MalwareEntity/EnemyDeathPool.cs"
-"Assets/Scripts/ObjectPools/EnemyDeath/TrojanHorse/TrojanEffects/TrojanEffectController.cs"
 "Assets/Scripts/ObjectPools/EnemyDeath/TrojanHorse/TrojanEffects/TrojanEffectPool.cs"
 "Assets/Scripts/ObjectPools/EnemyDeath/TrojanHorse/TrojanEntity/TrojanController.cs"
 "Assets/Scripts/ObjectPools/EnemyDeath/TrojanHorse/TrojanEntity/TrojanHorsePool.cs"

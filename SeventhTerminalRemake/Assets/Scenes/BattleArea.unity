@@ -32592,6 +32592,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 93688b6c7c800614a8a1645a9b945231, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  malware: {fileID: 1724736139, guid: b294d92debf2e4a418bc022669b6d9ce, type: 3}
 --- !u!114 &1589939388
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -32604,9 +32605,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc5abff272b888478fda447812e86a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemySpawn: {fileID: 1724736139, guid: b294d92debf2e4a418bc022669b6d9ce, type: 3}
-  enemyPool: {fileID: 0}
-  trojanHorse: {fileID: 1589939390}
+  malwarePool: {fileID: 1589939387}
+  trojanHorsePool: {fileID: 1589939390}
   timeToSpawn: 5
   currentState: {fileID: 458250647}
   timer: 0

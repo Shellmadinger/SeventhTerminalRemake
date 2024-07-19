@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 4909007656830957744}
   - component: {fileID: 4909007656830957747}
   - component: {fileID: 5240554693466664290}
+  - component: {fileID: 4170712897574630658}
   m_Layer: 0
   m_Name: TrojanHorse
   m_TagString: Untagged
@@ -112,6 +113,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   virus: {fileID: 11400000, guid: 954e366c363e20b4697b90e90be4cd2f, type: 2}
   currentState: {fileID: 0}
-  enemyKill: {fileID: 0}
   enemyHit: {fileID: 5933692830104820938, guid: 0e4d5b9482faf084a88666ea3bc12c01, type: 3}
+  effectPool: {fileID: 4170712897574630658}
   malwareSpawns: {fileID: 5125859987284126861, guid: b294d92debf2e4a418bc022669b6d9ce, type: 3}
+--- !u!114 &4170712897574630658
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909007656830957746}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66e3ab4f5508bcf4bb7d571d1e8d0331, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  deathEffect: {fileID: 8537878828340990204, guid: d1ff27ebcb8d7634099e48e818be9937, type: 3}
