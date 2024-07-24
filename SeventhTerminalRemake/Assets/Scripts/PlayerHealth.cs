@@ -5,8 +5,6 @@ using UnityEngine;
 public class PlayerHealth : MonoBehaviour
 {
     public float maxHealth;
-    public string attackerTag;
-    public float damageAmount;
     public HealthBar healthBar;
     public bool isDead = false;
     [SerializeField] float health;
@@ -42,15 +40,23 @@ public class PlayerHealth : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        //Inflict damage when colliding with attacker
-        if (collision.gameObject.tag == attackerTag)
+        var objTag = collision.gameObject.tag;
+        switch (objTag)
         {
-            //Vector3 direction = (transform.position - collision.gameObject.transform.position).normalized;
-            //body.AddForce(direction * 1000, ForceMode.Impulse);
-            health -= damageAmount;
-            //Change health bar
-            healthBar.SetHealth(((int)health));
+            case ("BootSectorVirus"):
+                health -= 5f;
+                healthBar.SetHealth(((int)health));
+                break;
+            case ("TrojanHorse"):
+                health -= 3f;
+                healthBar.SetHealth(((int)health));
+                break;
+            case ("Malware"):
+                health -= 1f;
+                healthBar.SetHealth(((int)health));
+                break;
+            default:
+                break;
         }
-
     }
 }

@@ -6,6 +6,9 @@ TagManager:
   tags:
   - Enemy
   - Ground
+  - BootSectorVirus
+  - Malware
+  - TrojanHorse
   layers:
   - Default
   - TransparentFX

@@ -32573,6 +32573,7 @@ GameObject:
   - component: {fileID: 1589939388}
   - component: {fileID: 1589939387}
   - component: {fileID: 1589939390}
+  - component: {fileID: 1589939391}
   m_Layer: 0
   m_Name: EnemySpawner
   m_TagString: Untagged
@@ -32605,6 +32606,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffc5abff272b888478fda447812e86a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  bSVPool: {fileID: 1589939391}
   malwarePool: {fileID: 1589939387}
   trojanHorsePool: {fileID: 1589939390}
   timeToSpawn: 5
@@ -32638,6 +32640,19 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   trojanHorse: {fileID: 5240554693466664290, guid: 88f7ae7f3f10170498817bd22c08aeba, type: 3}
+--- !u!114 &1589939391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1589939386}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0a653ff6968e56408777917b0cd1fa6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bSV: {fileID: 7201379041204356923, guid: bb8d4a83eeaef01489d3fdc9488939be, type: 3}
 --- !u!1 &1598891110
 GameObject:
   m_ObjectHideFlags: 0

@@ -4,11 +4,15 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour
 {
+    public BSVPool bSVPool;
     public EnemyDeathPool malwarePool;
     public TrojanHorsePool trojanHorsePool;
     public float timeToSpawn;
     [SerializeField] GameManager currentState;
     [SerializeField] float timer;
+    int malwareSpawnChance;
+    int trojanSpawnChance;
+    int bSVSpawnChance;
    
     float timeElapsedMin;
     float internalTimer;
@@ -40,21 +44,37 @@ public class EnemySpawner : MonoBehaviour
             timeElapsedMin = Mathf.FloorToInt(internalTimer / 60)+2;// convert internalTimer to minutes
             timeToSpawn = 4 / (1 + timeElapsedMin)+1; //Formula that increases spawn frequency after every minute
             timer += Time.deltaTime % 60; //Also run another timer that's converted into seconds
+
+            malwareSpawnChance = 95;
+            trojanSpawnChance = 5;
+            bSVSpawnChance = 1;
+           
             if (timer >= timeToSpawn)
             {
                 timer = 0f;
                 int percentageSpawning = Random.Range(1, 100);
                 Debug.Log(percentageSpawning);
-                if (percentageSpawning >= 5f)
+                if(percentageSpawning <= bSVSpawnChance)
+                {
+                    bSVPool._pool.Get();
+                }
+                if (percentageSpawning <= malwareSpawnChance)
                 {
                     malwarePool._pool.Get();
                 }
 
-                if (percentageSpawning >= 95f)
+                if (percentageSpawning <= trojanSpawnChance)
                 {
                     trojanHorsePool._pool.Get();
                 }
 
+            }
+
+            if (timer >= 1)
+            {
+                malwareSpawnChance = 65;
+                trojanSpawnChance = 25;
+                bSVSpawnChance = 10;
             }
 
             if (timeToSpawn < 2)
@@ -78,5 +98,10 @@ public class EnemySpawner : MonoBehaviour
         //Kill method fot TrojanHorse
         trojanHorsePool._pool.Release(trojanHorseReleased);
 
+    }
+
+    public void KillBSV (BSVController bSVReleased)
+    {
+        bSVPool._pool.Release(bSVReleased);
     }
 }

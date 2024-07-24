@@ -86,7 +86,7 @@ public class TrojanController : MonoBehaviour, IDamageable
             //When colliding with the player, kill the enemy and get the death effect
 
             effectPool._pool.Get();
-            Destroy(this);
+            enemySpawner.KillTrojan(this);
 
             Vector3 dir = (collision.transform.position - transform.position).normalized;
             //Set isKnockedBack to true
