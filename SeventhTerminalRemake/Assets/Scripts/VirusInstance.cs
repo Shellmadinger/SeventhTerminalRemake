@@ -8,4 +8,5 @@ public class VirusInstance : ScriptableObject
     public float virusHealth;
     public float virusMaxHealth;
     public float virusSpeed;
+    public float virusScoring;
 }

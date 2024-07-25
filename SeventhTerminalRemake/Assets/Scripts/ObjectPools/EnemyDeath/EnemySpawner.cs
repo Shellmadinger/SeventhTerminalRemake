@@ -16,13 +16,6 @@ public class EnemySpawner : MonoBehaviour
    
     float timeElapsedMin;
     float internalTimer;
-    // Start is called before the first frame update
-    void Start()
-    {
-        //Get Enemeypool
-        malwarePool = GetComponent<EnemyDeathPool>();
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -45,33 +38,38 @@ public class EnemySpawner : MonoBehaviour
             timeToSpawn = 4 / (1 + timeElapsedMin)+1; //Formula that increases spawn frequency after every minute
             timer += Time.deltaTime % 60; //Also run another timer that's converted into seconds
 
-            malwareSpawnChance = 95;
-            trojanSpawnChance = 5;
+            //Inital spawn chances for enemies
             bSVSpawnChance = 1;
+            trojanSpawnChance = 4;
+            malwareSpawnChance = 95;
+            
            
             if (timer >= timeToSpawn)
             {
+                //When timer is above timeToSpawn, set timer back to 0 and roll a random number between 1 and 100
                 timer = 0f;
                 int percentageSpawning = Random.Range(1, 100);
-                Debug.Log(percentageSpawning);
-                if(percentageSpawning <= bSVSpawnChance)
+                //Depending on random number rolled, spawn the corrolating enemy
+                if(percentageSpawning >= 0f && percentageSpawning <= bSVSpawnChance)
                 {
                     bSVPool._pool.Get();
                 }
-                if (percentageSpawning <= malwareSpawnChance)
-                {
-                    malwarePool._pool.Get();
-                }
 
-                if (percentageSpawning <= trojanSpawnChance)
+                if (percentageSpawning >= bSVSpawnChance && percentageSpawning <= trojanSpawnChance)
                 {
                     trojanHorsePool._pool.Get();
                 }
+
+                if (percentageSpawning >= trojanSpawnChance && percentageSpawning <= malwareSpawnChance)
+                {
+                    malwarePool._pool.Get();
+                }   
 
             }
 
             if (timer >= 1)
             {
+                //at one minute, update the spawn chances to this
                 malwareSpawnChance = 65;
                 trojanSpawnChance = 25;
                 bSVSpawnChance = 10;
@@ -95,13 +93,14 @@ public class EnemySpawner : MonoBehaviour
 
     public void KillTrojan(TrojanController trojanHorseReleased)
     {
-        //Kill method fot TrojanHorse
+        //Kill method for TrojanHorse
         trojanHorsePool._pool.Release(trojanHorseReleased);
 
     }
 
     public void KillBSV (BSVController bSVReleased)
     {
+        //Kill method for BSV
         bSVPool._pool.Release(bSVReleased);
     }
 }

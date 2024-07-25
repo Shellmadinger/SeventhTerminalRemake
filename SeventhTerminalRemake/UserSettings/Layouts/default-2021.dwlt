@@ -121,7 +121,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 200}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 111
+  controlID: 142
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -146,7 +146,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 200}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 144
+  controlID: 45
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -270,8 +270,8 @@ MonoBehaviour:
     y: 0
     width: 379.33325
     height: 819.3333
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -627,9 +627,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -83.466286, y: -10.552389, z: 56.09738}
+    m_Target: {x: -83.70827, y: 1.9566178, z: 34.81555}
     speed: 2
-    m_Value: {x: -83.466286, y: -10.552389, z: 56.09738}
+    m_Value: {x: -83.70827, y: 1.9566178, z: 34.81555}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -676,13 +676,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.12947065, y: -0.094011165, z: 0.011657977, w: -0.9874336}
+    m_Target: {x: 0.0066724806, y: -0.9405813, z: 0.3399793, w: 0.022422725}
     speed: 2
-    m_Value: {x: -0.12942137, y: -0.09397538, z: 0.01165354, w: -0.9870578}
+    m_Value: {x: 0.006669725, y: -0.9401929, z: 0.33983886, w: 0.022413464}
   m_Size:
-    m_Target: 15.8871355
+    m_Target: 6.434901
     speed: 2
-    m_Value: 15.8871355
+    m_Value: 6.434901
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -738,9 +738,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 9c500000
-      m_LastClickedID: 20636
-      m_ExpandedIDs: a422ffff8641ffff0ee3ffff32fbffffa04f0000
+      m_SelectedIDs: ee6bf9ff
+      m_LastClickedID: -431122
+      m_ExpandedIDs: a022f9ff7413faff8417faff5a3efbff660afdff7621fdff160fffff5881ffffaedaffff18fbffff2cfbffff32fbffff3a4f0000564f0000924f0000a84f0000ec4f0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -805,22 +805,22 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs
+    - Assets/Prefabs/ParticleEffects
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets/Prefabs/ParticleEffects
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Firaa\OneDrive\Documents\GitHub\SeventhTerminalRemake\SeventhTerminalRemake
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 82520000
-    m_LastClickedID: 21122
-    m_ExpandedIDs: 000000006a5200006c5200006e5200007052000072520000745200008852000000ca9a3bffffff7f
+    m_SelectedIDs: ee5c0000
+    m_LastClickedID: 23790
+    m_ExpandedIDs: 000000009a5200009c5200009e520000a0520000a2520000a4520000a6520000b652000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -848,7 +848,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000006a5200006c5200006e520000705200007252000074520000
+    m_ExpandedIDs: 000000009a5200009c5200009e520000a0520000a2520000a4520000a6520000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 

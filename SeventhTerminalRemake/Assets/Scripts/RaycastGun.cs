@@ -18,6 +18,9 @@ public class RaycastGun : MonoBehaviour
     public GameManager currentState;
     public HealthBar overHeatMeter;
     [SerializeField] float overHeat = 0f;
+    [SerializeField] GameObject altFireBullet;
+    [SerializeField] Transform altFirePoint;
+    [SerializeField] Transform playerRotation;
     float fireTime = 0f;
     bool isFiring;
     bool isOverHeating;
@@ -51,6 +54,18 @@ public class RaycastGun : MonoBehaviour
             }
 
             else if (Input.GetMouseButton(0)!=true)
+            {
+                isFiring = false;
+            }
+
+            if(Input.GetMouseButtonDown(1) && isOverHeating == false)
+            {
+                isFiring = true;
+                Instantiate(altFireBullet, altFirePoint.position, Quaternion.Euler(0,0,100));
+                overHeat += overHeatMax * 0.3f;
+            }
+
+            else if (Input.GetMouseButtonDown(1)!= true)
             {
                 isFiring = false;
             }

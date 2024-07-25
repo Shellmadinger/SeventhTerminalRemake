@@ -9,17 +9,19 @@ public class GameManager : MonoBehaviour
     public int gameState = 0;
     [SerializeField] TMP_Text countDownText;
     [SerializeField] TMP_Text timerText;
+    [SerializeField] TMP_Text scoreText;
     [SerializeField] float timer = 3;
     [SerializeField] float gameTimerMin;
     [SerializeField] float gameTimerSec;
     [SerializeField] PlayerHealth playerIsDead;
     float gameTimerDisplay;
+    float totalScore;
 
     private void Start()
     {
-        //Set timer on start
-        timerText.text = "00:00";
-       
+        //Set timer and score on start
+        timerText.text = "Timer: 00:00";
+        totalScore = 0;
     }
 
     // Update is called once per frame
@@ -27,6 +29,7 @@ public class GameManager : MonoBehaviour
     {
         CountDown();
         GamePlayTimer();
+        Score();
     }
 
     void CountDown()
@@ -37,7 +40,6 @@ public class GameManager : MonoBehaviour
             //If gamestate is 0, start the timer
             timer -= Time.deltaTime % 60;
             countDownText.text = timer.ToString("#");
-            //Debug.Log(timer);
            
             if(timer <= 0)
             {
@@ -61,7 +63,7 @@ public class GameManager : MonoBehaviour
             gameTimerSec = Mathf.FloorToInt(gameTimerDisplay % 60);
 
             //Send values into text
-            timerText.text = gameTimerMin.ToString("0#") + ":" + gameTimerSec.ToString("0#");
+            timerText.text = "Timer: " + gameTimerMin.ToString("0#") + ":" + gameTimerSec.ToString("0#");
             
             if(playerIsDead.isDead == true)
             {
@@ -69,6 +71,18 @@ public class GameManager : MonoBehaviour
             }
         }
         
+    }
+
+    void Score()
+    {
+        //update score text
+        scoreText.text = "Score: " + totalScore.ToString();
+    }
+
+    public void AddToScore(float virusScoring)
+    {
+        //Just a scoring function
+        totalScore += virusScoring;
     }
 
    

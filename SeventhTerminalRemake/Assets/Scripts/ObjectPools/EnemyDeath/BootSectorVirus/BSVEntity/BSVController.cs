@@ -73,6 +73,7 @@ public class BSVController : MonoBehaviour, IDamageable
             //When colliding with the player, kill the enemy and get the death effect
 
             effectPool._pool.Get();
+            currentState.AddToScore(virus.virusScoring);
             enemySpawner.KillBSV(this);
 
             Vector3 dir = (collision.transform.position - transform.position).normalized;

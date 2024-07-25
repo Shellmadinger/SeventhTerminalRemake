@@ -58,6 +58,7 @@ public class TrojanController : MonoBehaviour, IDamageable
             for (int i = 0; i < 3; i++)
             {
                 //Instantiate malware when the Trojan Horse dies
+                //It's honestly easier to instantiate the malware spawns then getting them from pool
                 Vector3 adjustSpawnRange = new Vector3(this.transform.position.x + Random.Range(-10, 10), this.transform.position.y + Random.Range(-10, 10),
                     this.transform.position.z + Random.Range(-10, 10));
                 Instantiate(malwareSpawns, adjustSpawnRange, Quaternion.identity);
@@ -65,6 +66,7 @@ public class TrojanController : MonoBehaviour, IDamageable
 
             //Get the death effect from the pool and called Kill function
             effectPool._pool.Get();
+            currentState.AddToScore(virus.virusScoring);
             enemySpawner.KillTrojan(this);
         }
     }
@@ -83,11 +85,7 @@ public class TrojanController : MonoBehaviour, IDamageable
     {
         if (collision.gameObject.tag == "Player")
         {
-            //When colliding with the player, kill the enemy and get the death effect
-
-            effectPool._pool.Get();
-            enemySpawner.KillTrojan(this);
-
+            //For the Trojan Horse, because he's so big, he doesn't explode on collision
             Vector3 dir = (collision.transform.position - transform.position).normalized;
             //Set isKnockedBack to true
             collision.gameObject.GetComponent<KnockBack>().isKnockedBack = true;
