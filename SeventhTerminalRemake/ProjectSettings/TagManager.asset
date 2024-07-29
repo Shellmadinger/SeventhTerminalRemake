@@ -9,14 +9,15 @@ TagManager:
   - BootSectorVirus
   - Malware
   - TrojanHorse
+  - Environment
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - Enemy
   - Water
   - UI
-  - 
+  - Environment
   - 
   - 
   - 

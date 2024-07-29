@@ -17,6 +17,7 @@ public class BasicMovement3D : MonoBehaviour
     Vector3 fullMovement;
     bool isGrounded;
     bool isJumping;
+    bool gameManagerOverride;
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -25,31 +26,40 @@ public class BasicMovement3D : MonoBehaviour
 
     void Move()
     {
-        //Check if the current game state is 1, which is when actual gameplay should start
-        if (currentGameState.gameState == 1)
+        if (currentGameState != null)
         {
-            if(isGrounded == true) { Physics.gravity = new Vector3(0,(gravityOnGround * -1),0); }
-            if(isJumping == true && isGrounded == false) { Physics.gravity = new Vector3(0, -9.81f, 0); }
-            //Get x and Y axises
-            horiMove = Input.GetAxis("Horizontal");
-            vertMove = Input.GetAxis("Vertical");
-            fullMovement = new Vector3(horiMove, 0f, vertMove);
-            //Move Gameobject
-            Vector3 move = transform.TransformDirection(fullMovement) * speed;
-            body.velocity = new Vector3(move.x, body.velocity.y, move.z);
-
-            if (Input.GetButton("Jump") && isGrounded == true)
+            //Check if the current game state is 1, which is when actual gameplay should start
+            if (currentGameState.gameState == 1 || gameManagerOverride == true)
             {
-                isJumping = true;
-                if (isJumping == true)
-                {
-                    //Vector3 jumpForce = Vector3.up * 100f;
-                    body.velocity += (Vector3.up * Physics.gravity.y * (gravityOnJump - 1) * Time.deltaTime) * -1;
-                }
-                
-            }
+                if (isGrounded == true) { Physics.gravity = new Vector3(0, (gravityOnGround * -1), 0); }
+                if (isJumping == true && isGrounded == false) { Physics.gravity = new Vector3(0, -9.81f, 0); }
+                //Get x and Y axises
+                horiMove = Input.GetAxis("Horizontal");
+                vertMove = Input.GetAxis("Vertical");
+                fullMovement = new Vector3(horiMove, 0f, vertMove);
+                //Move Gameobject
+                Vector3 move = transform.TransformDirection(fullMovement) * speed;
+                body.velocity = new Vector3(move.x, body.velocity.y, move.z);
 
+                if (Input.GetButton("Jump") && isGrounded == true)
+                {
+                    isJumping = true;
+                    if (isJumping == true)
+                    {
+                        //Vector3 jumpForce = Vector3.up * 100f;
+                        body.velocity += (Vector3.up * Physics.gravity.y * (gravityOnJump - 1) * Time.deltaTime) * -1;
+                    }
+
+                }
+
+            }
         }
+
+        else
+        {
+            gameManagerOverride = true;
+        }
+       
 
     }
 

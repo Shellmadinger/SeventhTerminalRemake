@@ -10,6 +10,7 @@ public class EnemySpawner : MonoBehaviour
     public float timeToSpawn;
     [SerializeField] GameManager currentState;
     [SerializeField] float timer;
+    [SerializeField] bool canSpawn;
     int malwareSpawnChance;
     int trojanSpawnChance;
     int bSVSpawnChance;
@@ -25,7 +26,7 @@ public class EnemySpawner : MonoBehaviour
     void SpawnEnemies()
     {
         
-        if(currentState.gameState == 1)
+        if(currentState.gameState == 1 && canSpawn == true)
         {
             //When state is 1, run the internal timer
             //Internal Timer ONLY EXISTS so that I didn't have to pull the time values from Gamemanager, and use the currentState variable

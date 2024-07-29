@@ -24,6 +24,7 @@ public class RaycastGun : MonoBehaviour
     float fireTime = 0f;
     bool isFiring;
     bool isOverHeating;
+    bool gameManagerOverride;
     HitPool hitPool;
 
     private void Start()
@@ -34,44 +35,56 @@ public class RaycastGun : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Like with other scripts, check if the game state is 1 before activating the fire button.
-        //God, there has to be a better way to do this...
-        if(currentState.gameState == 1)
+        if(currentState != null)
         {
-            //If the conditions here are met, the gun will fire. Also note the overheating bool
-            if (Input.GetButton("Fire1") && Time.time >= fireTime && isOverHeating == false)
+            //Like with other scripts, check if the game state is 1 before activating the fire button.
+            //God, there has to be a better way to do this...
+            if (currentState.gameState == 1 || gameManagerOverride == true)
             {
-                //Call Fire method when time is greater than the fire rate
-                fireTime = Time.time + 1f / fireRate;
-                Fire();
+                //If the conditions here are met, the gun will fire. Also note the overheating bool
+                if (Input.GetButton("Fire1") && Time.time >= fireTime && isOverHeating == false)
+                {
+                    //Call Fire method when time is greater than the fire rate
+                    fireTime = Time.time + 1f / fireRate;
+                    Fire();
+                }
+
+                //Checks if the gun is firing, based on if mouse button is being pressed and overheating is false;
+                if (Input.GetMouseButton(0) && isOverHeating == false)
+                {
+                    isFiring = true;
+
+                }
+
+                else if (Input.GetMouseButton(0) != true)
+                {
+                    isFiring = false;
+                }
+
+                if (Input.GetMouseButtonDown(1) && isOverHeating == false)
+                {
+                    isFiring = true;
+                    Instantiate(altFireBullet, altFirePoint.position, Quaternion.Euler(altFirePoint.rotation.eulerAngles.x, altFirePoint.rotation.eulerAngles.y,
+                        altFirePoint.rotation.eulerAngles.z));
+                    
+                    overHeat += overHeatMax * 0.3f;
+                }
+
+                else if (Input.GetMouseButtonDown(1) != true)
+                {
+                    isFiring = false;
+                }
             }
 
-            //Checks if the gun is firing, based on if mouse button is being pressed and overheating is false;
-            if (Input.GetMouseButton(0) && isOverHeating == false)
-            {
-                isFiring = true;
-                
-            }
-
-            else if (Input.GetMouseButton(0)!=true)
-            {
-                isFiring = false;
-            }
-
-            if(Input.GetMouseButtonDown(1) && isOverHeating == false)
-            {
-                isFiring = true;
-                Instantiate(altFireBullet, altFirePoint.position, Quaternion.Euler(0,0,100));
-                overHeat += overHeatMax * 0.3f;
-            }
-
-            else if (Input.GetMouseButtonDown(1)!= true)
-            {
-                isFiring = false;
-            }
+            OverHeating();
         }
 
-        OverHeating();
+        else
+        {
+            Debug.Log("Game Manager not set. Initiating override");
+            gameManagerOverride = true;
+        }
+        
        
     }
 

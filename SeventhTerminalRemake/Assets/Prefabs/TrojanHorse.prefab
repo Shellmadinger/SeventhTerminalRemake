@@ -14,7 +14,8 @@ GameObject:
   - component: {fileID: 4909007656830957747}
   - component: {fileID: 5240554693466664290}
   - component: {fileID: 4170712897574630658}
-  m_Layer: 0
+  - component: {fileID: -7752524505907849214}
+  m_Layer: 3
   m_Name: TrojanHorse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,6 +131,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   deathEffect: {fileID: 1315167633, guid: 432e3a8fae45af840aa5307286783a08, type: 3}
+--- !u!54 &-7752524505907849214
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4909007656830957746}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1001 &6465328631839429466
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -140,6 +157,10 @@ PrefabInstance:
     - target: {fileID: 4444017309159672917, guid: 0e4d5b9482faf084a88666ea3bc12c01, type: 3}
       propertyPath: m_Name
       value: EnemyHitTrojan
+      objectReference: {fileID: 0}
+    - target: {fileID: 4444017309159672917, guid: 0e4d5b9482faf084a88666ea3bc12c01, type: 3}
+      propertyPath: m_Layer
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5933692830104820938, guid: 0e4d5b9482faf084a88666ea3bc12c01, type: 3}
       propertyPath: InitialModule.startColor.maxColor.b
