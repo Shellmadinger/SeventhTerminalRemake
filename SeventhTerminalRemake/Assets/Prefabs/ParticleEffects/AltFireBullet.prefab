@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 9082062015380815581}
   - component: {fileID: 9082062015380815579}
   - component: {fileID: 9082062015380815578}
+  - component: {fileID: 2936346546886754718}
   m_Layer: 0
   m_Name: Particle System (1)
   m_TagString: Untagged
@@ -48,7 +49,7 @@ ParticleSystem:
   ringBufferMode: 0
   ringBufferLoopRange: {x: 0, y: 1}
   emitterVelocityMode: 1
-  looping: 1
+  looping: 0
   prewarm: 0
   playOnAwake: 1
   useUnscaledTime: 0
@@ -4761,7 +4762,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 345103baad39c9546a52937423808828, type: 2}
+  - {fileID: 2100000, guid: 985d0c9503d15634591aea2ba5d80a76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4812,6 +4813,20 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
+--- !u!114 &2936346546886754718
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9082062015380815580}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 96af477759351d842bc0c813704f38b1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timerSeconds: 3
+  currentParent: {fileID: 9082062016152908561}
 --- !u!1 &9082062016152908563
 GameObject:
   m_ObjectHideFlags: 0
@@ -4860,7 +4875,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   altGunDamage: 5
-  explosion: {fileID: 5820173847272578373, guid: c49ed61cc57b00e4dba430bd627ba249, type: 3}
+  explosion: {fileID: 3157517008397611691, guid: c49ed61cc57b00e4dba430bd627ba249, type: 3}
+  bulletTrail: {fileID: 9082062015380815579}
+  newParent: {fileID: 0}
   speed: 300
 --- !u!135 &9082062016152908575
 SphereCollider:

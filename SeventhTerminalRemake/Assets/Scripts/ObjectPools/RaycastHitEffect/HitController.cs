@@ -5,7 +5,6 @@ using UnityEngine.Pool;
 
 public class HitController : MonoBehaviour
 {
-
     private ObjectPool<HitController> _pool;
     private void OnParticleSystemStopped()
     {

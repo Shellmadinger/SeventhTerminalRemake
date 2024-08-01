@@ -365,6 +365,7 @@
 "Assets/Scripts/ObjectPools/RaycastHitEffect/HitController.cs"
 "Assets/Scripts/ObjectPools/RaycastHitEffect/HitPool.cs"
 "Assets/Scripts/ParticleStop.cs"
+"Assets/Scripts/ParticleStopOnTimer.cs"
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/RaycastGun.cs"
 "Assets/Scripts/Target.cs"

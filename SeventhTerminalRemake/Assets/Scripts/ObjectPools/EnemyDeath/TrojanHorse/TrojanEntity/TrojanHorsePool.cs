@@ -6,6 +6,7 @@ public class TrojanHorsePool : MonoBehaviour
 {
     public ObjectPool<TrojanController> _pool;
     public TrojanController trojanHorse;
+    [SerializeField] Transform trojanParent;
     private EnemySpawner trojanSpawning;
 
     Vector3 randVec;
@@ -20,7 +21,7 @@ public class TrojanHorsePool : MonoBehaviour
 
    private TrojanController CreateObject()
    {
-        TrojanController trojanHolder = Instantiate(trojanHorse,trojanSpawning.gameObject.transform.position,Quaternion.identity);
+        TrojanController trojanHolder = Instantiate(trojanHorse,trojanSpawning.gameObject.transform.position,Quaternion.identity, trojanParent);
         trojanHolder.SetPool(_pool);
 
         return trojanHolder;

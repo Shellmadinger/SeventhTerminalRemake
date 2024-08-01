@@ -21,6 +21,7 @@ public class RaycastGun : MonoBehaviour
     [SerializeField] GameObject altFireBullet;
     [SerializeField] Transform altFirePoint;
     [SerializeField] Transform playerRotation;
+    [SerializeField] GameObject altFireParent;
     float fireTime = 0f;
     bool isFiring;
     bool isOverHeating;
@@ -65,7 +66,7 @@ public class RaycastGun : MonoBehaviour
                 {
                     isFiring = true;
                     Instantiate(altFireBullet, altFirePoint.position, Quaternion.Euler(altFirePoint.rotation.eulerAngles.x, altFirePoint.rotation.eulerAngles.y,
-                        altFirePoint.rotation.eulerAngles.z));
+                        altFirePoint.rotation.eulerAngles.z), altFireParent.transform);
                     
                     overHeat += overHeatMax * 0.3f;
                 }

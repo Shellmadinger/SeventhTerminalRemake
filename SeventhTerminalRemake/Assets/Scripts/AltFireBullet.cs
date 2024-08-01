@@ -6,6 +6,8 @@ public class AltFireBullet : MonoBehaviour
 {
     public float altGunDamage;
     [SerializeField] ParticleSystem explosion;
+    [SerializeField] ParticleSystem bulletTrail;
+    [SerializeField] GameObject newParent;
     [SerializeField] float speed;
   
     // Update is called once per frame
@@ -13,6 +15,7 @@ public class AltFireBullet : MonoBehaviour
     {
         //Move bullet forward
         transform.position += transform.forward * speed * Time.deltaTime;
+        newParent = GameObject.Find("AltFireParent");
     }
 
     private void OnTriggerEnter(Collider other)
@@ -34,8 +37,9 @@ public class AltFireBullet : MonoBehaviour
 
         else if(other.gameObject.layer == 6)
         {
+            bulletTrail.gameObject.transform.parent = newParent.transform;
             Destroy(this.gameObject);
-            Instantiate(explosion, this.transform.position, Quaternion.identity);
+            Instantiate(explosion, this.transform.position, Quaternion.identity, newParent.transform);
         }
         
     }

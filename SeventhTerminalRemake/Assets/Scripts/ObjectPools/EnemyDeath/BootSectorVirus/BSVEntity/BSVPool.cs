@@ -7,6 +7,7 @@ public class BSVPool : MonoBehaviour
 {
     public ObjectPool<BSVController> _pool;
     public BSVController bSV;
+    [SerializeField] Transform bSVParent;
     private EnemySpawner bSVSpawning;
 
     Vector3 randVec;
@@ -21,7 +22,7 @@ public class BSVPool : MonoBehaviour
 
     private BSVController CreateObject()
     {
-        BSVController bSVHolder = Instantiate(bSV, bSVSpawning.gameObject.transform.position, Quaternion.identity);
+        BSVController bSVHolder = Instantiate(bSV, bSVSpawning.gameObject.transform.position, Quaternion.identity, bSVParent);
         bSVHolder.SetPool(_pool);
 
         return bSVHolder;
