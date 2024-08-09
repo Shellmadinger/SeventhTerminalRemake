@@ -21,11 +21,11 @@ public class RaycastGun : MonoBehaviour
     [SerializeField] GameObject altFireBullet;
     [SerializeField] Transform altFirePoint;
     [SerializeField] Transform playerRotation;
-    [SerializeField] GameObject altFireParent;
     float fireTime = 0f;
     bool isFiring;
     bool isOverHeating;
     bool gameManagerOverride;
+    bool usingRegularFire;
     HitPool hitPool;
 
     private void Start()
@@ -53,28 +53,26 @@ public class RaycastGun : MonoBehaviour
                 //Checks if the gun is firing, based on if mouse button is being pressed and overheating is false;
                 if (Input.GetMouseButton(0) && isOverHeating == false)
                 {
+                    
                     isFiring = true;
+                    usingRegularFire = true;
 
                 }
 
                 else if (Input.GetMouseButton(0) != true)
                 {
                     isFiring = false;
+                    usingRegularFire = false;
                 }
 
-                if (Input.GetMouseButtonDown(1) && isOverHeating == false)
+                if (Input.GetMouseButtonDown(1) && isOverHeating == false && usingRegularFire == false)
                 {
-                    isFiring = true;
                     Instantiate(altFireBullet, altFirePoint.position, Quaternion.Euler(altFirePoint.rotation.eulerAngles.x, altFirePoint.rotation.eulerAngles.y,
-                        altFirePoint.rotation.eulerAngles.z), altFireParent.transform);
+                        altFirePoint.rotation.eulerAngles.z));
                     
-                    overHeat += overHeatMax * 0.3f;
+                    overHeat += overHeatMax * 0.65f;
                 }
 
-                else if (Input.GetMouseButtonDown(1) != true)
-                {
-                    isFiring = false;
-                }
             }
 
             OverHeating();
@@ -123,7 +121,7 @@ public class RaycastGun : MonoBehaviour
         overHeatMeter.SetHealth((int)overHeat);
         if (isFiring == false && isOverHeating == false)
         {
-            overHeat -= 2f;
+            overHeat -= 1f;
             if (overHeat <= 0)
             {
                 overHeat = 0;

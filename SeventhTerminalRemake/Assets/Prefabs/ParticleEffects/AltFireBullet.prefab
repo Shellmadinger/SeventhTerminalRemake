@@ -4877,7 +4877,6 @@ MonoBehaviour:
   altGunDamage: 5
   explosion: {fileID: 3157517008397611691, guid: c49ed61cc57b00e4dba430bd627ba249, type: 3}
   bulletTrail: {fileID: 9082062015380815579}
-  newParent: {fileID: 0}
   speed: 300
 --- !u!135 &9082062016152908575
 SphereCollider:
@@ -4890,7 +4889,7 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 6.7
+  m_Radius: 2
   m_Center: {x: 0, y: 0, z: 0}
 --- !u!54 &6699453168720176453
 Rigidbody:

@@ -51,6 +51,7 @@ public class TrojanController : MonoBehaviour, IDamageable
         virus.virusHealth -= amount;
         if (virus.virusHealth > 0)
         {
+            Debug.Log(virus.virusHealth);
             enemyHit.Play();
         }
         if (virus.virusHealth <= 0)

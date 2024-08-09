@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 383874751981536650}
   - component: {fileID: 383874751981536651}
   - component: {fileID: 2189346221488838745}
+  - component: {fileID: 1073326789878212154}
   m_Layer: 0
   m_Name: AltFireBulletObject
   m_TagString: Untagged
@@ -29,8 +30,8 @@ Transform:
   m_GameObject: {fileID: 383874751981536648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -65.9, y: -0.10862255, z: 55.1}
-  m_LocalScale: {x: 6.0297694, y: 6.0297694, z: 6.0297694}
-  m_ConstrainProportionsScale: 0
+  m_LocalScale: {x: 0.99999994, y: 0.99999994, z: 0.99999994}
+  m_ConstrainProportionsScale: 1
   m_Children:
   - {fileID: 383874752702834559}
   m_Father: {fileID: 0}
@@ -94,7 +95,7 @@ SphereCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 383874751981536648}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Radius: 0.5
@@ -112,7 +113,25 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   altGunDamage: 5
+  explosion: {fileID: 3157517008397611691, guid: c49ed61cc57b00e4dba430bd627ba249, type: 3}
+  bulletTrail: {fileID: 383874752702834545}
   speed: 100
+--- !u!54 &1073326789878212154
+Rigidbody:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 383874751981536648}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
 --- !u!1 &383874752702834556
 GameObject:
   m_ObjectHideFlags: 0
@@ -4874,7 +4893,7 @@ ParticleSystemRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 345103baad39c9546a52937423808828, type: 2}
+  - {fileID: 2100000, guid: 985d0c9503d15634591aea2ba5d80a76, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
