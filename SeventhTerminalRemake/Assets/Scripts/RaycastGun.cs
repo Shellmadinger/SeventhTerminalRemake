@@ -67,15 +67,17 @@ public class RaycastGun : MonoBehaviour
 
                 if (Input.GetMouseButtonDown(1) && isOverHeating == false && usingRegularFire == false)
                 {
+                    isFiring = true;
                     Instantiate(altFireBullet, altFirePoint.position, Quaternion.Euler(altFirePoint.rotation.eulerAngles.x, altFirePoint.rotation.eulerAngles.y,
                         altFirePoint.rotation.eulerAngles.z));
                     
                     overHeat += overHeatMax * 0.65f;
                 }
 
+                OverHeating();
             }
 
-            OverHeating();
+            
         }
 
         else
