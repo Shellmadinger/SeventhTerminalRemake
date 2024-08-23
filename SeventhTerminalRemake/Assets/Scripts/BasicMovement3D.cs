@@ -33,7 +33,7 @@ public class BasicMovement3D : MonoBehaviour
             {
                 Debug.Log(body.velocity);
                 if (isGrounded == true) { Physics.gravity = new Vector3(0, (gravityOnGround*-1), 0); }
-                //if (isJumping == true && isGrounded == false) { Physics.gravity = new Vector3(0, -30f, 0); }
+                //if (isJumping == true && isGrounded == false) { Physics.gravity = new Vector3(0, -50f, 0); }
                 //Get x and Y axises
                 horiMove = Input.GetAxis("Horizontal");
                 vertMove = Input.GetAxis("Vertical");
@@ -55,6 +55,8 @@ public class BasicMovement3D : MonoBehaviour
                         body.velocity += (Vector3.up * Physics.gravity.y * (gravityOnJump) * Time.deltaTime) * -1;
                        
                     }
+
+              
 
                 }
 

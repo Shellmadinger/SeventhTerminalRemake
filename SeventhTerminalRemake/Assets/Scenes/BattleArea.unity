@@ -32463,7 +32463,7 @@ MonoBehaviour:
   timeToSpawn: 5
   currentState: {fileID: 458250647}
   timer: 0
-  canSpawn: 1
+  canSpawn: 0
 --- !u!4 &1589939389
 Transform:
   m_ObjectHideFlags: 0
