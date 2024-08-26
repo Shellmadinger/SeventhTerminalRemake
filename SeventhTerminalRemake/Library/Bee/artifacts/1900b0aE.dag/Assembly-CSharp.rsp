@@ -369,6 +369,7 @@
 "Assets/Scripts/PlayerHealth.cs"
 "Assets/Scripts/RaycastGun.cs"
 "Assets/Scripts/Target.cs"
+"Assets/Scripts/TextureScroll.cs"
 "Assets/Scripts/VirusInstance.cs"
 -langversion:9.0
 
