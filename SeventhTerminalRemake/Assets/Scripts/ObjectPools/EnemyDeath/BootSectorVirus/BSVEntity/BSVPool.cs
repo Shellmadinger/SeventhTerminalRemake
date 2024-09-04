@@ -30,7 +30,7 @@ public class BSVPool : MonoBehaviour
 
     private void OnGet(BSVController bSVHolder)
     {
-        randVec = new Vector3(Random.Range(-5, -180), Random.Range(-3, 2), Random.Range(27, 170));
+        randVec = new Vector3(Random.Range(5, -238), Random.Range(45, 50), Random.Range(123, 343));
 
         bSVHolder.transform.position = randVec;
 

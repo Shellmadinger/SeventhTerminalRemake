@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3a36afb15f1fc904a98ead34051c8c51, type: 3}
   m_Name: TrojanHorse
   m_EditorClassIdentifier: 
-  virusHealth: 50
-  virusMaxHealth: 50
+  virusHealth: 1
+  virusMaxHealth: 30
   virusSpeed: 5
   virusScoring: 10
