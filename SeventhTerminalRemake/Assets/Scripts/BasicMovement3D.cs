@@ -10,9 +10,10 @@ public class BasicMovement3D : MonoBehaviour
     public float gravityOnJump;
     public Rigidbody body;
     [SerializeField] KnockBack knockBackBool;
+    [SerializeField] LayerMask ground;
     float horiMove;
     float vertMove;
-    float jump;
+    float rayDistance;
     float gravity;
     Vector3 fullMovement;
     bool isGrounded;
@@ -28,11 +29,14 @@ public class BasicMovement3D : MonoBehaviour
     {
         if (currentGameState != null)
         {
+            //Debug.Log(isGrounded);
             //Check if the current game state is 1, which is when actual gameplay should start
             if (currentGameState.gameState == 1 || gameManagerOverride == true)
             {
-                Debug.Log(body.velocity);
-                if (isGrounded == true) { Physics.gravity = new Vector3(0, (gravityOnGround*-1), 0); }
+                CheckGrounded();
+                Debug.Log(Physics.gravity);
+                //if (isGrounded == true) { Physics.gravity = new Vector3(0, (gravityOnGround*-1), 0); }
+                Physics.gravity = new Vector3(0, (gravityOnGround*-1), 0);
                 //if (isJumping == true && isGrounded == false) { Physics.gravity = new Vector3(0, -50f, 0); }
                 //Get x and Y axises
                 horiMove = Input.GetAxis("Horizontal");
@@ -52,11 +56,10 @@ public class BasicMovement3D : MonoBehaviour
                     if (isJumping == true)
                     {
                         //Vector3 jumpForce = Vector3.up * 100f;
-                        body.velocity += (Vector3.up * Physics.gravity.y * (gravityOnJump) * Time.deltaTime) * -1;
+                        body.velocity += (Vector3.up * Physics.gravity.y * (gravityOnJump) * Time.deltaTime)*-1;
+   
                        
                     }
-
-              
 
                 }
 
@@ -70,12 +73,20 @@ public class BasicMovement3D : MonoBehaviour
        
 
     }
-
-    //Collision checks for isGrounded
-    private void OnCollisionEnter(Collision collision)
+    void CheckGrounded()
     {
-        if (collision.gameObject.tag == "Ground") { isGrounded = true; isJumping = false; }
+        RaycastHit hit;
+        if(Physics.Raycast(transform.position, Vector3.down, out hit, 5f, ground))
+        {
+            isGrounded = true;
+        }
+
+        else
+        {
+            isGrounded = false;
+        }
     }
+
 
     private void OnCollisionStay(Collision collision)
     {

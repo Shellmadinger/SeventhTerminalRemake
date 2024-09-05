@@ -14,8 +14,10 @@ public class TrojanController : MonoBehaviour, IDamageable
     public ParticleSystem enemyHit;
     [SerializeField] TrojanEffectPool effectPool;
     [SerializeField] GameObject malwareSpawns;
+    [SerializeField] AudioClip virusSoundClip;
     EnemySpawner enemySpawner;
     GameObject target;
+    AudioSource virusSource;
 
 
     private void Start()
@@ -25,7 +27,7 @@ public class TrojanController : MonoBehaviour, IDamageable
         enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
         currentState = GameObject.Find("Game Manager").GetComponent<GameManager>();
         target = GameObject.Find("Player");
-       
+        virusSource = GetComponent<AudioSource>();
     }
 
     private void Update()
@@ -53,6 +55,8 @@ public class TrojanController : MonoBehaviour, IDamageable
         {
             Debug.Log(virus.virusHealth);
             enemyHit.Play();
+            virusSource.pitch = Random.Range(0.4f, 0.7f);
+            virusSource.PlayOneShot(virusSoundClip);
         }
         if (virus.virusHealth <= 0)
         {

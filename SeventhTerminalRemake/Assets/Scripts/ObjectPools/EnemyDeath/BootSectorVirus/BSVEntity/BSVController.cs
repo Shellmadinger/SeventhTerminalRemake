@@ -12,8 +12,10 @@ public class BSVController : MonoBehaviour, IDamageable
     [SerializeField] BSVEffectPool effectPool;
     [SerializeField] float bSVTimer;
     [SerializeField] int timeUntilExplosion;
+    [SerializeField] AudioClip virusSoundClip;
     EnemySpawner enemySpawner;
     GameObject target;
+    AudioSource virusSource;
 
     // Start is called before the first frame update
     void Start()
@@ -24,6 +26,7 @@ public class BSVController : MonoBehaviour, IDamageable
         enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
         currentState = GameObject.Find("Game Manager").GetComponent<GameManager>();
         target = GameObject.Find("Player");
+        virusSource = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -52,6 +55,8 @@ public class BSVController : MonoBehaviour, IDamageable
         if (virus.virusHealth > 0)
         {
             enemyHit.Play();
+            virusSource.pitch = Random.Range(1.2f, 1.6f);
+            virusSource.PlayOneShot(virusSoundClip);
         }
         if (virus.virusHealth <= 0 || bSVTimer >= timeUntilExplosion)
         {

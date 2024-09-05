@@ -9,6 +9,8 @@ public class PlayerHealth : MonoBehaviour
     public bool isDead = false;
     [SerializeField] float health;
     [SerializeField] GameObject gunModel;
+    [SerializeField] AudioClip damageClip;
+    AudioSource damageAudio;
     //Rigidbody body;
 
     private void Start()
@@ -17,7 +19,7 @@ public class PlayerHealth : MonoBehaviour
         health = maxHealth;
         //Set max health for health bar.
         healthBar.SetMaxHealth(((int)maxHealth));
-        //body = GetComponent<Rigidbody>();
+        damageAudio = GetComponent<AudioSource>();
     }
 
     // Update is called once per frame
@@ -46,14 +48,17 @@ public class PlayerHealth : MonoBehaviour
             case ("BootSectorVirus"):
                 health -= 5f;
                 healthBar.SetHealth(((int)health));
+                damageAudio.PlayOneShot(damageClip);
                 break;
             case ("TrojanHorse"):
                 health -= 3f;
                 healthBar.SetHealth(((int)health));
+                damageAudio.PlayOneShot(damageClip);
                 break;
             case ("Malware"):
                 health -= 1f;
                 healthBar.SetHealth(((int)health));
+                damageAudio.PlayOneShot(damageClip);
                 break;
             default:
                 break;

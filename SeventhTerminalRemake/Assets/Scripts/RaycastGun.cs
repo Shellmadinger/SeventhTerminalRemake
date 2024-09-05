@@ -21,17 +21,21 @@ public class RaycastGun : MonoBehaviour
     [SerializeField] GameObject altFireBullet;
     [SerializeField] Transform altFirePoint;
     [SerializeField] Transform playerRotation;
+    [SerializeField] AudioClip rayGunSound;
     float fireTime = 0f;
     bool isFiring;
     bool isOverHeating;
     bool gameManagerOverride;
     bool usingRegularFire;
     HitPool hitPool;
+    AudioSource rayGunSource;
 
     private void Start()
     {
         //Get Hitpool Script
         hitPool = GetComponent<HitPool>();
+        rayGunSource = GetComponent<AudioSource>();
+        rayGunSource.clip = rayGunSound;
     }
     // Update is called once per frame
     void Update()
@@ -48,6 +52,8 @@ public class RaycastGun : MonoBehaviour
                     //Call Fire method when time is greater than the fire rate
                     fireTime = Time.time + 1f / fireRate;
                     Fire();
+                    rayGunSource.pitch = Random.Range(0.8f, 1.2f);
+                    rayGunSource.Play();
                 }
 
                 //Checks if the gun is firing, based on if mouse button is being pressed and overheating is false;
@@ -123,7 +129,7 @@ public class RaycastGun : MonoBehaviour
         overHeatMeter.SetHealth((int)overHeat);
         if (isFiring == false && isOverHeating == false)
         {
-            overHeat -= 1f;
+            overHeat -= 2f;
             if (overHeat <= 0)
             {
                 overHeat = 0;
@@ -133,7 +139,7 @@ public class RaycastGun : MonoBehaviour
         //if the gun is firing, increase the overheat gauge
         else if (isFiring == true)
         {
-            overHeat += 0.5f;
+            overHeat += 1f;
             //if the overheat gauge goes over the maxium, start overheating
             if (overHeat >= overHeatMax)
             {
@@ -147,7 +153,7 @@ public class RaycastGun : MonoBehaviour
         if(isOverHeating == true)
         {
             //In other words, when overheating, decrease the heat gauge by a lower amount until it back to 0
-            overHeat -= 0.25f;
+            overHeat -= 0.5f;
             if(overHeat<= 0)
             {
                 //At this point, the gun will stop overheating and you can use it again.
