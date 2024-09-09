@@ -13,6 +13,8 @@ public class BSVController : MonoBehaviour, IDamageable
     [SerializeField] float bSVTimer;
     [SerializeField] int timeUntilExplosion;
     [SerializeField] AudioClip virusSoundClip;
+    [SerializeField] AudioClip virusDeathClip;
+    [SerializeField] AudioSource virusDeathAudio;
     EnemySpawner enemySpawner;
     GameObject target;
     AudioSource virusSource;
@@ -27,6 +29,8 @@ public class BSVController : MonoBehaviour, IDamageable
         currentState = GameObject.Find("Game Manager").GetComponent<GameManager>();
         target = GameObject.Find("Player");
         virusSource = GetComponent<AudioSource>();
+        virusSource.clip = virusSoundClip;
+        virusDeathAudio.clip = virusDeathClip;
     }
 
     // Update is called once per frame
@@ -56,14 +60,23 @@ public class BSVController : MonoBehaviour, IDamageable
         {
             enemyHit.Play();
             virusSource.pitch = Random.Range(1.2f, 1.6f);
-            virusSource.PlayOneShot(virusSoundClip);
+            virusSource.Play();
         }
         if (virus.virusHealth <= 0 || bSVTimer >= timeUntilExplosion)
         {
             //Get the death effect from the pool and called Kill function
-            effectPool._pool.Get();
-            enemySpawner.KillBSV(this);
+            StartCoroutine(OnDeath());
         }
+    }
+
+    IEnumerator OnDeath()
+    {
+        virusDeathAudio.pitch = Random.Range(1.6f, 2f);
+        virusDeathAudio.Play();
+        yield return new WaitForSeconds(0.1f);
+        effectPool._pool.Get();
+        currentState.AddToScore(virus.virusScoring);
+        enemySpawner.KillBSV(this);
     }
 
     public void Damage(float damageAmount)

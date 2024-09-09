@@ -15,4 +15,4 @@ MonoBehaviour:
   virusHealth: 5
   virusMaxHealth: 5
   virusSpeed: 30
-  virusScoring: 5
+  virusScoring: 20

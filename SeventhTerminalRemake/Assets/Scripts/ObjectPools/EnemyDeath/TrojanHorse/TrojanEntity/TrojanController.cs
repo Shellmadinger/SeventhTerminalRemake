@@ -15,6 +15,8 @@ public class TrojanController : MonoBehaviour, IDamageable
     [SerializeField] TrojanEffectPool effectPool;
     [SerializeField] GameObject malwareSpawns;
     [SerializeField] AudioClip virusSoundClip;
+    [SerializeField] AudioClip virusDeathClip;
+    [SerializeField] AudioSource virusDeathAudio;
     EnemySpawner enemySpawner;
     GameObject target;
     AudioSource virusSource;
@@ -28,6 +30,8 @@ public class TrojanController : MonoBehaviour, IDamageable
         currentState = GameObject.Find("Game Manager").GetComponent<GameManager>();
         target = GameObject.Find("Player");
         virusSource = GetComponent<AudioSource>();
+        virusSource.clip = virusSoundClip;
+        virusDeathAudio.clip = virusDeathClip;
     }
 
     private void Update()
@@ -56,7 +60,7 @@ public class TrojanController : MonoBehaviour, IDamageable
             Debug.Log(virus.virusHealth);
             enemyHit.Play();
             virusSource.pitch = Random.Range(0.4f, 0.7f);
-            virusSource.PlayOneShot(virusSoundClip);
+            virusSource.Play();
         }
         if (virus.virusHealth <= 0)
         {
@@ -70,10 +74,19 @@ public class TrojanController : MonoBehaviour, IDamageable
             }
 
             //Get the death effect from the pool and called Kill function
-            effectPool._pool.Get();
-            currentState.AddToScore(virus.virusScoring);
-            enemySpawner.KillTrojan(this);
+            StartCoroutine(OnDeath());
+          
         }
+    }
+
+    IEnumerator OnDeath()
+    {
+        virusDeathAudio.pitch = Random.Range(0.4f, 0.6f);
+        virusDeathAudio.Play();
+        yield return new WaitForSeconds(0.1f);
+        effectPool._pool.Get();
+        currentState.AddToScore(virus.virusScoring);
+        enemySpawner.KillTrojan(this);
     }
 
     public void Damage(float damageAmount)
