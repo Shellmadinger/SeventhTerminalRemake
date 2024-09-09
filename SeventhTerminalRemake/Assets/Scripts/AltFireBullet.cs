@@ -31,7 +31,6 @@ public class AltFireBullet : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        Debug.Log(other.gameObject.layer);
         //This requires some context
         //Tl'DR; due to how unity registers collisons, the bullet has to be a trigger in order for it to work
         //Otherwise, it would need a rigidbody WITH physics in order to work, which doesn't not feel good at all.

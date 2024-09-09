@@ -34,7 +34,7 @@ public class BasicMovement3D : MonoBehaviour
             if (currentGameState.gameState == 1 || gameManagerOverride == true)
             {
                 CheckGrounded();
-                Debug.Log(Physics.gravity);
+                //Debug.Log(Physics.gravity);
                 //if (isGrounded == true) { Physics.gravity = new Vector3(0, (gravityOnGround*-1), 0); }
                 Physics.gravity = new Vector3(0, (gravityOnGround*-1), 0);
                 //if (isJumping == true && isGrounded == false) { Physics.gravity = new Vector3(0, -50f, 0); }

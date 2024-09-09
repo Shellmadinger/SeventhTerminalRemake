@@ -5003,9 +5003,9 @@ MonoBehaviour:
   enemyKill: {fileID: 8537878828340990204, guid: d1ff27ebcb8d7634099e48e818be9937, type: 3}
   enemyRelease: {fileID: 0}
   enemyHit: {fileID: 6131320497968253802}
-  isTrojanHorse: 0
   canMove: 0
   virusSoundClip: {fileID: 8300000, guid: aa693a765454db6468a0ff325f77b5b7, type: 3}
+  virusDeathClip: {fileID: 8300000, guid: 03949d8efec7e634db1d36fadfed5136, type: 3}
 --- !u!54 &5644261975431817081
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5033,7 +5033,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_PlayOnAwake: 1
+  m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
   Loop: 0
