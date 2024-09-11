@@ -22,6 +22,7 @@ public class RaycastGun : MonoBehaviour
     [SerializeField] Transform altFirePoint;
     [SerializeField] Transform playerRotation;
     [SerializeField] AudioClip rayGunSound;
+    [SerializeField] AudioClip altFireSound;
     float fireTime = 0f;
     bool isFiring;
     bool isOverHeating;
@@ -76,6 +77,8 @@ public class RaycastGun : MonoBehaviour
                     isFiring = true;
                     Instantiate(altFireBullet, altFirePoint.position, Quaternion.Euler(altFirePoint.rotation.eulerAngles.x, altFirePoint.rotation.eulerAngles.y,
                         altFirePoint.rotation.eulerAngles.z));
+                    rayGunSource.pitch = Random.Range(0.8f, 1f);
+                    rayGunSource.PlayOneShot(altFireSound);
                     
                     overHeat += overHeatMax * 0.65f;
                 }

@@ -8,7 +8,9 @@ public class AltFireBullet : MonoBehaviour
     [SerializeField] ParticleSystem explosion;
     [SerializeField] ParticleSystem bulletTrail;
     [SerializeField] float speed;
+    [SerializeField] AudioClip altFireEndingExplosionSound;
     private float seconds = 0f;
+    AudioSource altFireEndingExplosionAudio;
     private GameObject newParent;
 
     void Update()
@@ -17,13 +19,14 @@ public class AltFireBullet : MonoBehaviour
         //Move bullet forward
         transform.position += transform.forward * speed * Time.deltaTime;
         newParent = GameObject.Find("AltFireParent");
-        
+        altFireEndingExplosionAudio = GetComponent<AudioSource>();
+
     }
 
     void DestroyOnTimer()
     {
         seconds += Time.deltaTime % 60;
-        if(seconds >= 3f)
+        if (seconds >= 3f)
         {
             DestroyObject();
         }
@@ -37,7 +40,7 @@ public class AltFireBullet : MonoBehaviour
         //Also for this reason, enemies now have kinimatic rigidbodies
 
         //Check layer for enemy layer
-        if(other.gameObject.layer == 3)
+        if (other.gameObject.layer == 3)
         {
             IDamageable isDamageable = other.transform.GetComponent<IDamageable>();
             if (isDamageable != null)
@@ -46,18 +49,22 @@ public class AltFireBullet : MonoBehaviour
             }
         }
 
-        else if(other.gameObject.layer == 6)
+        else if (other.gameObject.layer == 6 || other.gameObject.tag == "Ground")
         {
-                DestroyObject();
+
+            StartCoroutine(DestroyObject());
         }
-        
+
     }
 
-    void DestroyObject()
+    IEnumerator DestroyObject()
     {
+        altFireEndingExplosionAudio.PlayOneShot(altFireEndingExplosionSound);
+        yield return new WaitForSeconds(0.1f);
         bulletTrail.gameObject.transform.parent = null;
         bulletTrail.gameObject.transform.localScale = new Vector3(1, 1, 1);
         Destroy(this.gameObject);
         Instantiate(explosion, this.transform.position, Quaternion.identity);
     }
+
 }

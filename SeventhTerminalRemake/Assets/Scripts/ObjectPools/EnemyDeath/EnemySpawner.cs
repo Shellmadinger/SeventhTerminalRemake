@@ -11,6 +11,8 @@ public class EnemySpawner : MonoBehaviour
     [SerializeField] GameManager currentState;
     [SerializeField] float timer;
     [SerializeField] bool canSpawn;
+    [SerializeField] AudioClip virusSpawnClip;
+    AudioSource virusSpawnAudio;
     int malwareSpawnChance;
     int trojanSpawnChance;
     int bSVSpawnChance;
@@ -18,6 +20,11 @@ public class EnemySpawner : MonoBehaviour
     float timeElapsedMin;
     float internalTimer;
     // Update is called once per frame
+
+    private void Start()
+    {
+        virusSpawnAudio = GetComponent<AudioSource>();
+    }
     void Update()
     {
         SpawnEnemies();
@@ -53,16 +60,22 @@ public class EnemySpawner : MonoBehaviour
                 //Depending on random number rolled, spawn the corrolating enemy
                 if(percentageSpawning >= 0f && percentageSpawning <= bSVSpawnChance)
                 {
+                    virusSpawnAudio.pitch = 1.5f;
+                    virusSpawnAudio.PlayOneShot(virusSpawnClip);
                     bSVPool._pool.Get();
                 }
 
                 if (percentageSpawning >= bSVSpawnChance && percentageSpawning <= trojanSpawnChance)
                 {
+                    virusSpawnAudio.pitch = 0.5f;
+                    virusSpawnAudio.PlayOneShot(virusSpawnClip);
                     trojanHorsePool._pool.Get();
                 }
 
                 if (percentageSpawning >= trojanSpawnChance && percentageSpawning <= malwareSpawnChance)
                 {
+                    virusSpawnAudio.pitch = 1f;
+                    virusSpawnAudio.PlayOneShot(virusSpawnClip);
                     malwarePool._pool.Get();
                 }   
 

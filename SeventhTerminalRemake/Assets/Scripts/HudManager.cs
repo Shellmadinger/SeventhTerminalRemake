@@ -8,6 +8,9 @@ public class HudManager : MonoBehaviour
     [SerializeField] GameObject gamePlayUI;
     [SerializeField] GameObject gameOverScreen;
     [SerializeField] GameManager currentState;
+    [SerializeField] AudioClip gameOverClip;
+    [SerializeField] AudioSource gameOverAudio;
+    bool soundHasPlayed = false;
     // Start is called before the first frame update
     void Start()
     {
@@ -21,9 +24,15 @@ public class HudManager : MonoBehaviour
     {
         if(currentState.gameState == 2)
         {
+            if (soundHasPlayed == false)
+            {
+                gameOverAudio.PlayOneShot(gameOverClip);
+                soundHasPlayed = true;
+            }
             //Pull up the game over screen when the state changes
             gamePlayUI.SetActive(false);
             gameOverScreen.SetActive(true);
+            
         }
     }
 }
