@@ -61,21 +61,21 @@ public class EnemySpawner : MonoBehaviour
                 if(percentageSpawning >= 0f && percentageSpawning <= bSVSpawnChance)
                 {
                     virusSpawnAudio.pitch = 1.5f;
-                    virusSpawnAudio.PlayOneShot(virusSpawnClip);
+                    //virusSpawnAudio.PlayOneShot(virusSpawnClip);
                     bSVPool._pool.Get();
                 }
 
                 if (percentageSpawning >= bSVSpawnChance && percentageSpawning <= trojanSpawnChance)
                 {
                     virusSpawnAudio.pitch = 0.5f;
-                    virusSpawnAudio.PlayOneShot(virusSpawnClip);
+                   // virusSpawnAudio.PlayOneShot(virusSpawnClip);
                     trojanHorsePool._pool.Get();
                 }
 
                 if (percentageSpawning >= trojanSpawnChance && percentageSpawning <= malwareSpawnChance)
                 {
                     virusSpawnAudio.pitch = 1f;
-                    virusSpawnAudio.PlayOneShot(virusSpawnClip);
+                    //virusSpawnAudio.PlayOneShot(virusSpawnClip);
                     malwarePool._pool.Get();
                 }   
 

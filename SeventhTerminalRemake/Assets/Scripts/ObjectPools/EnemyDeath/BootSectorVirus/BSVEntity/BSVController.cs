@@ -14,10 +14,12 @@ public class BSVController : MonoBehaviour, IDamageable
     [SerializeField] int timeUntilExplosion;
     [SerializeField] AudioClip virusSoundClip;
     [SerializeField] AudioClip virusDeathClip;
+    [SerializeField] AudioClip virusSpawnClip;
     [SerializeField] AudioSource virusDeathAudio;
+    [SerializeField] AudioSource virusSource;
     EnemySpawner enemySpawner;
     GameObject target;
-    AudioSource virusSource;
+    
 
     // Start is called before the first frame update
     void Start()
@@ -60,6 +62,7 @@ public class BSVController : MonoBehaviour, IDamageable
         {
             enemyHit.Play();
             virusSource.pitch = Random.Range(1.2f, 1.6f);
+            virusSource.spatialBlend = 0;
             virusSource.Play();
         }
         if (virus.virusHealth <= 0 || bSVTimer >= timeUntilExplosion)
@@ -106,6 +109,7 @@ public class BSVController : MonoBehaviour, IDamageable
         _pool = pool;
     }
 
+
     private void OnDisable()
     {
         //Reset health when killed
@@ -115,6 +119,9 @@ public class BSVController : MonoBehaviour, IDamageable
 
     private void OnEnable()
     {
-        bSVTimer += Time.deltaTime % 60; 
+        bSVTimer += Time.deltaTime % 60;
+        virusSource.spatialBlend = 1;
+        virusSource.pitch = 0.5f;
+        virusSource.PlayOneShot(virusSpawnClip);
     }
 }

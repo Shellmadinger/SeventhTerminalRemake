@@ -10,10 +10,11 @@ public class GameManager : MonoBehaviour
     [SerializeField] TMP_Text countDownText;
     [SerializeField] TMP_Text timerText;
     [SerializeField] TMP_Text scoreText;
-    [SerializeField] float timer = 3;
     [SerializeField] float gameTimerMin;
     [SerializeField] float gameTimerSec;
     [SerializeField] PlayerHealth playerIsDead;
+    [SerializeField] AudioClip countDownBeeps;
+    AudioSource countDownAudio;
     float gameTimerDisplay;
     float totalScore;
 
@@ -22,55 +23,57 @@ public class GameManager : MonoBehaviour
         //Set timer and score on start
         timerText.text = "Timer: 00:00";
         totalScore = 0;
+        countDownText.text = " ";
+        countDownAudio = GetComponent<AudioSource>();
+        StartCoroutine(CountDown());
     }
 
     // Update is called once per frame
     void Update()
     {
-        CountDown();
         GamePlayTimer();
         Score();
     }
 
-    void CountDown()
+    IEnumerator CountDown()
     {
-        if(gameState == 0)
+        countDownText.gameObject.SetActive(true);
+
+        for (int i = 3; i > 0; i--)
         {
-            countDownText.gameObject.SetActive(true);
-            //If gamestate is 0, start the timer
-            timer -= Time.deltaTime % 60;
-            countDownText.text = timer.ToString("#");
+            countDownAudio.PlayOneShot(countDownBeeps);
+            countDownText.text = i.ToString("#");
+            yield return new WaitForSeconds(1f);
            
-            if(timer <= 0)
-            {
-                //When timer reaches 0, advance state and reset timer
-                countDownText.gameObject.SetActive(false);
-                gameState = 1;
-                timer = 3;
-               
-            }
         }
+
+        countDownAudio.pitch = 1.5f;
+        countDownAudio.PlayOneShot(countDownBeeps);
+        countDownText.gameObject.SetActive(false);
+        gameState = 1;
+
     }
+
 
     void GamePlayTimer()
     {
-        if(gameState == 1)
+        if (gameState == 1)
         {
             //Run game timer when the countdown is doned
             gameTimerDisplay += Time.deltaTime;
             //Make values for display timer
-            gameTimerMin = Mathf.FloorToInt(gameTimerDisplay/ 60);
+            gameTimerMin = Mathf.FloorToInt(gameTimerDisplay / 60);
             gameTimerSec = Mathf.FloorToInt(gameTimerDisplay % 60);
 
             //Send values into text
             timerText.text = "Timer: " + gameTimerMin.ToString("0#") + ":" + gameTimerSec.ToString("0#");
-            
-            if(playerIsDead.isDead == true)
+
+            if (playerIsDead.isDead == true)
             {
                 gameState = 2;
             }
         }
-        
+
     }
 
     void Score()
@@ -85,5 +88,5 @@ public class GameManager : MonoBehaviour
         totalScore += virusScoring;
     }
 
-   
+
 }

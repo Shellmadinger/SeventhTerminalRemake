@@ -16,10 +16,12 @@ public class TrojanController : MonoBehaviour, IDamageable
     [SerializeField] GameObject malwareSpawns;
     [SerializeField] AudioClip virusSoundClip;
     [SerializeField] AudioClip virusDeathClip;
+    [SerializeField] AudioClip virusSpawnClip;
     [SerializeField] AudioSource virusDeathAudio;
+    [SerializeField] AudioSource virusSource;
     EnemySpawner enemySpawner;
     GameObject target;
-    AudioSource virusSource;
+   
 
 
     private void Start()
@@ -32,6 +34,8 @@ public class TrojanController : MonoBehaviour, IDamageable
         virusSource = GetComponent<AudioSource>();
         virusSource.clip = virusSoundClip;
         virusDeathAudio.clip = virusDeathClip;
+        virusSource.PlayOneShot(virusSpawnClip);
+      
     }
 
     private void Update()
@@ -60,6 +64,7 @@ public class TrojanController : MonoBehaviour, IDamageable
             Debug.Log(virus.virusHealth);
             enemyHit.Play();
             virusSource.pitch = Random.Range(0.4f, 0.7f);
+            virusSource.spatialBlend = 0;
             virusSource.Play();
         }
         if (virus.virusHealth <= 0)
@@ -109,6 +114,14 @@ public class TrojanController : MonoBehaviour, IDamageable
             collision.gameObject.GetComponent<KnockBack>().isKnockedBack = true;
             collision.gameObject.GetComponent<KnockBack>().direction = dir;
         }
+    }
+
+    private void OnEnable()
+    {
+        virusSource.spatialBlend = 1;
+        virusSource.pitch = 0.5f;
+        virusSource.PlayOneShot(virusSpawnClip);
+       
     }
 
     private void OnDisable()

@@ -250,7 +250,9 @@ MonoBehaviour:
   malwareSpawns: {fileID: 5125859987284126861, guid: b294d92debf2e4a418bc022669b6d9ce, type: 3}
   virusSoundClip: {fileID: 8300000, guid: aa693a765454db6468a0ff325f77b5b7, type: 3}
   virusDeathClip: {fileID: 8300000, guid: 03949d8efec7e634db1d36fadfed5136, type: 3}
+  virusSpawnClip: {fileID: 8300000, guid: 0d46eeeec76609e4facf033b18861561, type: 3}
   virusDeathAudio: {fileID: 785315784}
+  virusSource: {fileID: 7348018503771029932}
 --- !u!114 &4170712897574630658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -301,9 +303,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 375
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -318,6 +320,33 @@ AudioSource:
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.025909275
+      value: 0.72207594
+      inSlope: -5.6182203
+      outSlope: -5.6182203
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.4142633
+    - serializedVersion: 3
+      time: 0.09440999
+      value: 0.30815536
+      inSlope: -2.9088778
+      outSlope: -2.9088778
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.37427557
+    - serializedVersion: 3
+      time: 0.29973328
+      value: 0.055272594
+      inSlope: -0.21788391
+      outSlope: -0.21788391
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.72916365
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
@@ -336,7 +365,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

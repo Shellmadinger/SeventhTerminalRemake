@@ -5135,7 +5135,9 @@ MonoBehaviour:
   canMove: 0
   virusSoundClip: {fileID: 8300000, guid: aa693a765454db6468a0ff325f77b5b7, type: 3}
   virusDeathClip: {fileID: 8300000, guid: 03949d8efec7e634db1d36fadfed5136, type: 3}
+  virusSpawnClip: {fileID: 8300000, guid: 0d46eeeec76609e4facf033b18861561, type: 3}
   virusDeathAudio: {fileID: 868996304}
+  virusSource: {fileID: 8017825521471167929}
 --- !u!54 &5644261975431817081
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -5162,7 +5164,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 0d46eeeec76609e4facf033b18861561, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -5173,9 +5175,9 @@ AudioSource:
   Priority: 128
   DopplerLevel: 1
   MinDistance: 1
-  MaxDistance: 500
+  MaxDistance: 375
   Pan2D: 0
-  rolloffMode: 0
+  rolloffMode: 2
   BypassEffects: 0
   BypassListenerEffects: 0
   BypassReverbZones: 0
@@ -5190,6 +5192,33 @@ AudioSource:
       tangentMode: 0
       weightedMode: 0
       inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 0.025909275
+      value: 0.72207594
+      inSlope: -5.6182203
+      outSlope: -5.6182203
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.4142633
+    - serializedVersion: 3
+      time: 0.09440999
+      value: 0.30815536
+      inSlope: -2.9088778
+      outSlope: -2.9088778
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 1
+      outWeight: 0.37427557
+    - serializedVersion: 3
+      time: 0.29973328
+      value: 0.055272594
+      inSlope: -0.21788391
+      outSlope: -0.21788391
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.72916365
       outWeight: 0.33333334
     - serializedVersion: 3
       time: 1
@@ -5208,7 +5237,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0

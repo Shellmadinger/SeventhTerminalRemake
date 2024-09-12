@@ -30,7 +30,7 @@ public class PlayerHealth : MonoBehaviour
     {
         HealthRegen();
         PlayerHasDied();
-        Debug.Log(regenTimer);
+        
     }
 
     void HealthRegen()
