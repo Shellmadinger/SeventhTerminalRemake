@@ -10,4 +10,19 @@ public class ButtonManager : MonoBehaviour
         //Reload the scene when the button is pushed
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex, LoadSceneMode.Single);
     }
+
+    public void PlayGame()
+    {
+        SceneManager.LoadScene("BattleArena2");
+    }
+
+    public void ReturnToMenu()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
+    }
 }
