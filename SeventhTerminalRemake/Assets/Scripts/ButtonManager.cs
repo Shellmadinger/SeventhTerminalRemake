@@ -10,8 +10,12 @@ public class ButtonManager : MonoBehaviour
 
     public void Start()
     {
-        mainMenu.SetActive(true);
-        credits.SetActive(false);
+        if(SceneManager.GetActiveScene().name == "MainMenu")
+        {
+            mainMenu.SetActive(true);
+            credits.SetActive(false);
+        }
+        
     }
     public void ResetScene()
     {

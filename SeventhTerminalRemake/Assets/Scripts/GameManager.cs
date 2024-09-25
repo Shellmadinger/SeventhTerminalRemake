@@ -20,6 +20,7 @@ public class GameManager : MonoBehaviour
 
     private void Start()
     {
+        Time.timeScale = 1;
         //Set timer and score on start
         timerText.text = "Timer: 00:00";
         totalScore = 0;
