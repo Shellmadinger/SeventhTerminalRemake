@@ -19,12 +19,14 @@ public class BSVController : MonoBehaviour, IDamageable
     [SerializeField] AudioSource virusSource;
     EnemySpawner enemySpawner;
     GameObject target;
+    bool powerUpApplied = false;
     
 
     // Start is called before the first frame update
     void Start()
     {
-
+        virus.virusMaxHealth = 5;
+        virus.virusSpeed = 30;
         virus.virusHealth = virus.virusMaxHealth;
         //Get the enemy spawner, game manager and player. Since these objects are in the scene, we use find to get them
         enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
@@ -119,6 +121,7 @@ public class BSVController : MonoBehaviour, IDamageable
 
     private void OnEnable()
     {
+       
         bSVTimer += Time.deltaTime % 60;
         virusSource.spatialBlend = 1;
         virusSource.pitch = 0.5f;

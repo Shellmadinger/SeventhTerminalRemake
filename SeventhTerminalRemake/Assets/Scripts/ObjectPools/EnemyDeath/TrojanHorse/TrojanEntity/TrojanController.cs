@@ -21,11 +21,14 @@ public class TrojanController : MonoBehaviour, IDamageable
     [SerializeField] AudioSource virusSource;
     EnemySpawner enemySpawner;
     GameObject target;
+    bool powerUpApplied = false;
    
 
 
     private void Start()
     {
+        virus.virusMaxHealth = 30;
+        virus.virusSpeed = 5;
         virus.virusHealth = virus.virusMaxHealth;
         //Get the enemy spawner, game manager and player. Since these objects are in the scene, we use find to get them
         enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();

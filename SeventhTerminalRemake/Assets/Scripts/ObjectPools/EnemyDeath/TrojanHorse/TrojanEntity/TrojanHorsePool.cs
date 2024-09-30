@@ -21,6 +21,7 @@ public class TrojanHorsePool : MonoBehaviour
 
    private TrojanController CreateObject()
    {
+        
         TrojanController trojanHolder = Instantiate(trojanHorse,trojanSpawning.gameObject.transform.position,Quaternion.identity, trojanParent);
         trojanHolder.SetPool(_pool);
 

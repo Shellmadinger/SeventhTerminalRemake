@@ -7,6 +7,7 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public int gameState = 0;
+    public bool powerUp = false;
     [SerializeField] TMP_Text countDownText;
     [SerializeField] TMP_Text timerText;
     [SerializeField] TMP_Text scoreText;
@@ -14,6 +15,9 @@ public class GameManager : MonoBehaviour
     [SerializeField] float gameTimerSec;
     [SerializeField] PlayerHealth playerIsDead;
     [SerializeField] AudioClip countDownBeeps;
+    [SerializeField] VirusInstance malwareStats;
+    [SerializeField] VirusInstance trojanStats;
+    [SerializeField] VirusInstance bSVStats;
     AudioSource countDownAudio;
     float gameTimerDisplay;
     float totalScore;

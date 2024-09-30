@@ -16,6 +16,7 @@ public class EnemySpawner : MonoBehaviour
     int malwareSpawnChance;
     int trojanSpawnChance;
     int bSVSpawnChance;
+    
    
     float timeElapsedMin;
     float internalTimer;
@@ -42,15 +43,9 @@ public class EnemySpawner : MonoBehaviour
             //This is also why the timer even works to begin with. This is the stupidest solution to a problem I have ever used during my time with Unity
             //Why?
             internalTimer += Time.deltaTime;
-            timeElapsedMin = Mathf.FloorToInt(internalTimer / 60)+2;// convert internalTimer to minutes
+            timeElapsedMin = Mathf.FloorToInt(internalTimer / 60)+3 ;// convert internalTimer to minutes
             timeToSpawn = 4 / (1 + timeElapsedMin)+1; //Formula that increases spawn frequency after every minute
-            timer += Time.deltaTime % 60; //Also run another timer that's converted into seconds
-
-            //Inital spawn chances for enemies
-            bSVSpawnChance = 1;
-            trojanSpawnChance = 4;
-            malwareSpawnChance = 95;
-            
+            timer += Time.deltaTime % 60; //Also run another timer that's converted into second
            
             if (timer >= timeToSpawn)
             {
@@ -81,13 +76,38 @@ public class EnemySpawner : MonoBehaviour
 
             }
 
-            if (timer >= 1)
+            if(timeElapsedMin <= 0)
+            {
+                //Inital spawn chances for enemies
+                bSVSpawnChance = 1;
+                trojanSpawnChance = 4;
+                malwareSpawnChance = 95;
+            }
+
+            if (timeElapsedMin >= 1)
             {
                 //at one minute, update the spawn chances to this
                 malwareSpawnChance = 65;
                 trojanSpawnChance = 25;
                 bSVSpawnChance = 10;
             }
+
+            if (timeElapsedMin >= 2)
+            {
+                //at two minutes, update the spawn chances again to this
+                /*malwareSpawnChance = 45;
+                trojanSpawnChance = 35;
+                bSVSpawnChance = 20;*/
+                malwareSpawnChance = 100;
+                trojanSpawnChance = 0;
+                bSVSpawnChance = 0;
+            }
+
+            if (timeElapsedMin >= 3)
+            {
+                currentState.powerUp = true;
+            }
+
 
             if (timeToSpawn < 2)
             {
