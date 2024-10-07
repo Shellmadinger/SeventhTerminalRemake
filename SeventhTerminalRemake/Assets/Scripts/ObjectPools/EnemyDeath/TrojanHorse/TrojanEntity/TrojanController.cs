@@ -7,8 +7,10 @@ public class TrojanController : MonoBehaviour, IDamageable
 {
     private ObjectPool<TrojanController> _pool;
     public VirusInstance virus;
-    //public float health = 10f;
-    //public float speed = 10f;
+    public int score = 10;
+    public float maxHealth = 30f;
+    public float speed = 5f;
+    public float health;
     public GameManager currentState;
     ///public EnemySpawner enemyRelease;
     public ParticleSystem enemyHit;
@@ -27,9 +29,7 @@ public class TrojanController : MonoBehaviour, IDamageable
 
     private void Start()
     {
-        virus.virusMaxHealth = 30;
-        virus.virusSpeed = 5;
-        virus.virusHealth = virus.virusMaxHealth;
+        health = maxHealth;
         //Get the enemy spawner, game manager and player. Since these objects are in the scene, we use find to get them
         enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
         currentState = GameObject.Find("Game Manager").GetComponent<GameManager>();
@@ -52,25 +52,25 @@ public class TrojanController : MonoBehaviour, IDamageable
         {
             //Get the direction between enemy and player and move
             Vector3 targetDirection = target.transform.position - transform.position;
-            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, virus.virusSpeed * Time.deltaTime, 0.0f);
+            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, speed * Time.deltaTime, 0.0f);
             transform.rotation = Quaternion.LookRotation(newDirection);
 
-            transform.position += transform.forward * virus.virusSpeed * Time.deltaTime;
+            transform.position += transform.forward * speed * Time.deltaTime;
         }
     }
     public void TakeDamage(float amount)
     {
         //Reduce health by amount, then kill the enemy when health is 0
-        virus.virusHealth -= amount;
-        if (virus.virusHealth > 0)
+        health -= amount;
+        if (health > 0)
         {
-            Debug.Log(virus.virusHealth);
+            Debug.Log(health);
             enemyHit.Play();
             virusSource.pitch = Random.Range(0.4f, 0.7f);
             virusSource.spatialBlend = 0;
             virusSource.Play();
         }
-        if (virus.virusHealth <= 0)
+        if (health <= 0)
         {
             for (int i = 0; i < 3; i++)
             {
@@ -93,7 +93,7 @@ public class TrojanController : MonoBehaviour, IDamageable
         virusDeathAudio.Play();
         yield return new WaitForSeconds(0.1f);
         effectPool._pool.Get();
-        currentState.AddToScore(virus.virusScoring);
+        currentState.AddToScore(score);
         enemySpawner.KillTrojan(this);
     }
 
@@ -130,6 +130,6 @@ public class TrojanController : MonoBehaviour, IDamageable
     private void OnDisable()
     {
         //Reset health when killed
-        virus.virusHealth = virus.virusMaxHealth;
+        health = maxHealth;
     }
 }

@@ -1134,6 +1134,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
+  powerUp: 0
   countDownText: {fileID: 1645293985}
   timerText: {fileID: 1693024489}
   scoreText: {fileID: 296088263}
@@ -1141,6 +1142,9 @@ MonoBehaviour:
   gameTimerSec: 0
   playerIsDead: {fileID: 1342814625}
   countDownBeeps: {fileID: 8300000, guid: 923f1a721599f9f4cb92d0de179e2fdd, type: 3}
+  malwareStats: {fileID: 0}
+  trojanStats: {fileID: 0}
+  bSVStats: {fileID: 0}
 --- !u!82 &458250648
 AudioSource:
   m_ObjectHideFlags: 0
@@ -3152,7 +3156,7 @@ MonoBehaviour:
   timeToSpawn: 5
   currentState: {fileID: 458250647}
   timer: 0
-  canSpawn: 1
+  canSpawn: 0
   virusSpawnClip: {fileID: 8300000, guid: 0d46eeeec76609e4facf033b18861561, type: 3}
 --- !u!4 &1589939389
 Transform:

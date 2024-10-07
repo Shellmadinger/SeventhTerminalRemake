@@ -8,6 +8,7 @@ public class EnemySpawner : MonoBehaviour
     public EnemyDeathPool malwarePool;
     public TrojanHorsePool trojanHorsePool;
     public float timeToSpawn;
+    public bool powerUp = false;
     [SerializeField] GameManager currentState;
     [SerializeField] float timer;
     [SerializeField] bool canSpawn;
@@ -105,7 +106,7 @@ public class EnemySpawner : MonoBehaviour
 
             if (timeElapsedMin >= 3)
             {
-                currentState.powerUp = true;
+                powerUp = true;
             }
 
 

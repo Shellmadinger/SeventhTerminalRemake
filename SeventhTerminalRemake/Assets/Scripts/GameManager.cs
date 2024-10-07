@@ -7,7 +7,6 @@ using TMPro;
 public class GameManager : MonoBehaviour
 {
     public int gameState = 0;
-    public bool powerUp = false;
     [SerializeField] TMP_Text countDownText;
     [SerializeField] TMP_Text timerText;
     [SerializeField] TMP_Text scoreText;

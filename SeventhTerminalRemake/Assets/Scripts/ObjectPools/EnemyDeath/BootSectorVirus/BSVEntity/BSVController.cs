@@ -7,6 +7,10 @@ public class BSVController : MonoBehaviour, IDamageable
 {
     private ObjectPool<BSVController> _pool;
     public VirusInstance virus;
+    public int score = 20;
+    public float maxHealth = 5;
+    public float speed = 30f;
+    public float health;
     public GameManager currentState;
     public ParticleSystem enemyHit;
     [SerializeField] BSVEffectPool effectPool;
@@ -25,9 +29,7 @@ public class BSVController : MonoBehaviour, IDamageable
     // Start is called before the first frame update
     void Start()
     {
-        virus.virusMaxHealth = 5;
-        virus.virusSpeed = 30;
-        virus.virusHealth = virus.virusMaxHealth;
+        health = maxHealth;
         //Get the enemy spawner, game manager and player. Since these objects are in the scene, we use find to get them
         enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
         currentState = GameObject.Find("Game Manager").GetComponent<GameManager>();
@@ -49,25 +51,25 @@ public class BSVController : MonoBehaviour, IDamageable
         {
             //Get the direction between enemy and player and move
             Vector3 targetDirection = target.transform.position - transform.position;
-            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, virus.virusSpeed * Time.deltaTime, 0.0f);
+            Vector3 newDirection = Vector3.RotateTowards(transform.forward, targetDirection, speed * Time.deltaTime, 0.0f);
             transform.rotation = Quaternion.LookRotation(newDirection);
 
-            transform.position += transform.forward * virus.virusSpeed * Time.deltaTime;
+            transform.position += transform.forward * speed * Time.deltaTime;
         }
     }
 
     public void TakeDamage(float amount)
     {
         //Reduce health by amount, then kill the enemy when health is 0
-        virus.virusHealth -= amount;
-        if (virus.virusHealth > 0)
+        health -= amount;
+        if (health > 0)
         {
             enemyHit.Play();
             virusSource.pitch = Random.Range(1.2f, 1.6f);
             virusSource.spatialBlend = 0;
             virusSource.Play();
         }
-        if (virus.virusHealth <= 0 || bSVTimer >= timeUntilExplosion)
+        if (health <= 0 || bSVTimer >= timeUntilExplosion)
         {
             //Get the death effect from the pool and called Kill function
             StartCoroutine(OnDeath());
@@ -80,7 +82,7 @@ public class BSVController : MonoBehaviour, IDamageable
         virusDeathAudio.Play();
         yield return new WaitForSeconds(0.1f);
         effectPool._pool.Get();
-        currentState.AddToScore(virus.virusScoring);
+        currentState.AddToScore(score);
         enemySpawner.KillBSV(this);
     }
 
@@ -96,7 +98,6 @@ public class BSVController : MonoBehaviour, IDamageable
             //When colliding with the player, kill the enemy and get the death effect
 
             effectPool._pool.Get();
-            currentState.AddToScore(virus.virusScoring);
             enemySpawner.KillBSV(this);
 
             Vector3 dir = (collision.transform.position - transform.position).normalized;
@@ -115,7 +116,7 @@ public class BSVController : MonoBehaviour, IDamageable
     private void OnDisable()
     {
         //Reset health when killed
-        virus.virusHealth = virus.virusMaxHealth;
+        health = maxHealth;
         bSVTimer = 0;
     }
 
