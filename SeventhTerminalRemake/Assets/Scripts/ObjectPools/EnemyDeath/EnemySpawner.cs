@@ -96,12 +96,9 @@ public class EnemySpawner : MonoBehaviour
             if (timeElapsedMin >= 2)
             {
                 //at two minutes, update the spawn chances again to this
-                /*malwareSpawnChance = 45;
-                trojanSpawnChance = 35;
-                bSVSpawnChance = 20;*/
-                malwareSpawnChance = 100;
-                trojanSpawnChance = 0;
-                bSVSpawnChance = 0;
+                malwareSpawnChance = 50;
+                trojanSpawnChance = 40;
+                bSVSpawnChance = 10;
             }
 
             if (timeElapsedMin >= 3)

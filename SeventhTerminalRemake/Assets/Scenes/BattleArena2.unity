@@ -1134,7 +1134,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   gameState: 0
-  powerUp: 0
   countDownText: {fileID: 1645293985}
   timerText: {fileID: 1693024489}
   scoreText: {fileID: 296088263}
@@ -3154,9 +3153,10 @@ MonoBehaviour:
   malwarePool: {fileID: 1589939387}
   trojanHorsePool: {fileID: 1589939390}
   timeToSpawn: 5
+  powerUp: 0
   currentState: {fileID: 458250647}
   timer: 0
-  canSpawn: 0
+  canSpawn: 1
   virusSpawnClip: {fileID: 8300000, guid: 0d46eeeec76609e4facf033b18861561, type: 3}
 --- !u!4 &1589939389
 Transform:

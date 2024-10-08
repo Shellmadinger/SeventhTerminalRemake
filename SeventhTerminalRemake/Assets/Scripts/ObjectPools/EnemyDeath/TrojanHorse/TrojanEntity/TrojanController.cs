@@ -23,13 +23,11 @@ public class TrojanController : MonoBehaviour, IDamageable
     [SerializeField] AudioSource virusSource;
     EnemySpawner enemySpawner;
     GameObject target;
-    bool powerUpApplied = false;
    
 
 
     private void Start()
     {
-        health = maxHealth;
         //Get the enemy spawner, game manager and player. Since these objects are in the scene, we use find to get them
         enemySpawner = GameObject.Find("EnemySpawner").GetComponent<EnemySpawner>();
         currentState = GameObject.Find("Game Manager").GetComponent<GameManager>();
@@ -38,7 +36,12 @@ public class TrojanController : MonoBehaviour, IDamageable
         virusSource.clip = virusSoundClip;
         virusDeathAudio.clip = virusDeathClip;
         virusSource.PlayOneShot(virusSpawnClip);
-      
+        if (enemySpawner.powerUp == true)
+        {
+            maxHealth = 50;
+            speed = 10;
+        }
+        health = maxHealth;
     }
 
     private void Update()
@@ -129,6 +132,11 @@ public class TrojanController : MonoBehaviour, IDamageable
 
     private void OnDisable()
     {
+        if (enemySpawner.powerUp == true)
+        {
+            maxHealth = 50;
+            speed = 10;
+        }
         //Reset health when killed
         health = maxHealth;
     }
