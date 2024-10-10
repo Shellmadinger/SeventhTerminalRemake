@@ -17,6 +17,7 @@ public class RaycastGun : MonoBehaviour
     public RaycastHit hit;
     public GameManager currentState;
     public HealthBar overHeatMeter;
+    [SerializeField] HudManager checkPause;
     [SerializeField] float overHeat = 0f;
     [SerializeField] GameObject altFireBullet;
     [SerializeField] Transform altFirePoint;
@@ -45,7 +46,7 @@ public class RaycastGun : MonoBehaviour
         {
             //Like with other scripts, check if the game state is 1 before activating the fire button.
             //God, there has to be a better way to do this...
-            if (currentState.gameState == 1 || gameManagerOverride == true)
+            if (currentState.gameState == 1 && checkPause.isPaused == false)
             {
                 //If the conditions here are met, the gun will fire. Also note the overheating bool
                 if (Input.GetButton("Fire1") && Time.time >= fireTime && isOverHeating == false)
@@ -89,15 +90,7 @@ public class RaycastGun : MonoBehaviour
             }
 
             
-        }
-
-        else
-        {
-            Debug.Log("Game Manager not set. Initiating override");
-            gameManagerOverride = true;
-        }
-        
-       
+        }    
     }
 
     void Fire()
