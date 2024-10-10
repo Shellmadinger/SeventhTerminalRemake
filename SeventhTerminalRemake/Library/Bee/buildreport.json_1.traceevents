@@ -1,0 +1,716 @@
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_name", "args": { "name": "BeeDriver" } },
+{ "pid": 0, "tid": -1, "ph": "M", "name": "process_sort_index", "args": { "sort_index": "-2" } },
+{ "pid": 0, "tid": 1, "ph": "M", "name": "thread_name", "args": { "name": "" } },
+{ "pid": 0, "tid": 1, "ts": 1728583985689545, "dur": 544827, "ph": "X", "name": "Build Player", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1728583985689739, "dur": 14211, "ph": "X", "name": "WriteBuildProgramData", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1728583985703953, "dur": 518360, "ph": "X", "name": "Run Backend", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1728583986222315, "dur": 12056, "ph": "X", "name": "Finish", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1728583986234757, "dur": 7, "ph": "X", "name": "", "args": {} },
+{ "cat":"", "pid":12345, "tid":0, "ts":0, "ph":"M", "name":"process_name", "args": { "name":"bee_backend" } }
+,{ "pid":12345, "tid":0, "ts":1728583985719087, "dur":1010, "ph":"X", "name": "DriverInitData",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583985720105, "dur":198, "ph":"X", "name": "Tundra",  "args": { "detail":"RemoveStaleOutputs" }}
+,{ "pid":12345, "tid":0, "ts":1728583985720329, "dur":26, "ph":"X", "name": "Tundra",  "args": { "detail":"PrepareNodes" }}
+,{ "pid":12345, "tid":0, "ts":1728583985720355, "dur":684, "ph":"X", "name": "Tundra",  "args": { "detail":"BuildQueueInit" }}
+,{ "pid":12345, "tid":0, "ts":1728583985721066, "dur":571, "ph":"X", "name": "EnqueueRequestedNodes",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583985721637, "dur":1, "ph":"X", "name": "SortWorkingStack",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199101, "dur":169, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199270, "dur":7, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199277, "dur":575, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199852, "dur":27, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199879, "dur":4, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199883, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199889, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199891, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199897, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199898, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199907, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199908, "dur":6, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199914, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199915, "dur":11, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199926, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199928, "dur":9, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199937, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199939, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199944, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199945, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199949, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199950, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199955, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199956, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199961, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199962, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199967, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199968, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199972, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199973, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199978, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199979, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199984, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199986, "dur":5, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199991, "dur":1, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199992, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199996, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986199998, "dur":4, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986200002, "dur":2, "ph":"X", "name": "JoinBuildThread",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986200004, "dur":14, "ph":"X", "name": "ThreadStateDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986200018, "dur":0, "ph":"X", "name": "SharedResourceDestroy",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986200030, "dur":2, "ph":"X", "name": "BuildQueueDestroyTail",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986200050, "dur":857, "ph":"X", "name": "Tundra",  "args": { "detail":"Write AllBuiltNodes" }}
+,{ "pid":12345, "tid":1, "ts":1728583985721163, "dur":495, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985721658, "dur":2708, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985724366, "dur":649, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1728583985725015, "dur":103, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985725122, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985727649, "dur":2452, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/2.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":1, "ts":1728583985730134, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1728583985730219, "dur":732, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985730957, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985731609, "dur":3034, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityWebRequestTextureModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1728583985734680, "dur":198, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1728583985734878, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985734912, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985734918, "dur":4477, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UNETModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1728583985739418, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1728583985739512, "dur":22, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985739539, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985739544, "dur":5482, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.SpriteShapeModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1728583985745050, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1728583985745123, "dur":261, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985745395, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985745401, "dur":5870, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.DirectorModule.dll" }}
+,{ "pid":12345, "tid":1, "ts":1728583985751304, "dur":111090, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":1, "ts":1728583985862395, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985862472, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":1, "ts":1728583985862482, "dur":1932, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Internal.dll" }}
+,{ "pid":12345, "tid":1, "ts":1728583985864441, "dur":334650, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985721087, "dur":563, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985721652, "dur":2664, "ph":"X", "name": "CheckDagSignatures",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985724323, "dur":1, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"WriteText Library/Bee/artifacts/WinPlayerBuildProgram/Data/app.info" }}
+,{ "pid":12345, "tid":2, "ts":1728583985724327, "dur":184, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985724513, "dur":2, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/app.info" }}
+,{ "pid":12345, "tid":2, "ts":1728583985724516, "dur":70, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985724600, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985734982, "dur":1998, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/app.info" }}
+,{ "pid":12345, "tid":2, "ts":1728583985736982, "dur":67, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1728583985737050, "dur":129, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985737185, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985737191, "dur":7014, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TerrainPhysicsModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1728583985744227, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1728583985744288, "dur":178, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985744473, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985744479, "dur":2086, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.NVIDIAModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1728583985746590, "dur":121, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1728583985746712, "dur":41, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985746759, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985746770, "dur":4141, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.CrashReportingModule.dll" }}
+,{ "pid":12345, "tid":2, "ts":1728583985751008, "dur":144356, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":2, "ts":1728583985895365, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985895409, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":2, "ts":1728583985895420, "dur":599, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Telemetry.dll" }}
+,{ "pid":12345, "tid":2, "ts":1728583985896036, "dur":303088, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985721469, "dur":262, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985721731, "dur":2635, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985724366, "dur":110, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1728583985724477, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985724519, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985726964, "dur":3026, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":3, "ts":1728583985730017, "dur":83, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1728583985730101, "dur":162, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985730268, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985731674, "dur":3988, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.VehiclesModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1728583985735728, "dur":264, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1728583985735994, "dur":128, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985736128, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985736134, "dur":4931, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UIElementsNativeModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1728583985741086, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1728583985741161, "dur":137, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985741304, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985741310, "dur":3478, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ProfilerModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1728583985744817, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1728583985744886, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985744925, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985744931, "dur":3317, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.HotReloadModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1728583985748271, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1728583985748363, "dur":25, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985748392, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985748397, "dur":3893, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ClothModule.dll" }}
+,{ "pid":12345, "tid":3, "ts":1728583985752313, "dur":94618, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":3, "ts":1728583985846932, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985846973, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":3, "ts":1728583985846980, "dur":604, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Device.dll" }}
+,{ "pid":12345, "tid":3, "ts":1728583985847599, "dur":351511, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1728583985721735, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1728583985721735, "dur":2592, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1728583985724328, "dur":450, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1728583985724778, "dur":197, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1728583985724980, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1728583985726791, "dur":2523, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.5/web.config" }}
+,{ "pid":12345, "tid":4, "ts":1728583985729350, "dur":106, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":4, "ts":1728583985729457, "dur":16, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1728583985729490, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1728583985729581, "dur":15054, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/EmbedRuntime/mono-2.0-bdwgc.dll" }}
+,{ "pid":12345, "tid":4, "ts":1728583985744667, "dur":89, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1728583985744756, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1728583985744807, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1728583985744833, "dur":5991, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.InputModule.dll" }}
+,{ "pid":12345, "tid":4, "ts":1728583985750858, "dur":81313, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":4, "ts":1728583985832172, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1728583985832214, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":4, "ts":1728583985832221, "dur":807, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Timeline.dll" }}
+,{ "pid":12345, "tid":4, "ts":1728583985833043, "dur":366053, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985721348, "dur":359, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985721707, "dur":2658, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985724365, "dur":460, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1728583985724826, "dur":169, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985724997, "dur":20, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985726930, "dur":3338, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.0/machine.config" }}
+,{ "pid":12345, "tid":5, "ts":1728583985730293, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985730375, "dur":659, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985731041, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985731691, "dur":4893, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityWebRequestAudioModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985736637, "dur":70, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985736708, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985736800, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985736807, "dur":7074, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TextCoreFontEngineModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985743910, "dur":188, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985744099, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985744135, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985744143, "dur":6251, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.PhysicsModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985750421, "dur":97, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985750518, "dur":127, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985750652, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985750661, "dur":2770, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ARModule.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985753451, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985753468, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985753520, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985753527, "dur":2121, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Xml.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985755664, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985755680, "dur":14, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985755696, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985755699, "dur":1251, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Numerics.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985756965, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985756981, "dur":18, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985757002, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985757005, "dur":700, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.IO.Compression.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985757720, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985757737, "dur":11, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985757750, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985757754, "dur":1541, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985759311, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985759328, "dur":13, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985759344, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985759347, "dur":886, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.ComponentModel.Composition.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985760259, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985760277, "dur":16, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985760296, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985760299, "dur":1860, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/mscorlib.dll" }}
+,{ "pid":12345, "tid":5, "ts":1728583985762181, "dur":27, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":5, "ts":1728583985762225, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985762257, "dur":698, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Resources/unity_builtin_extra" }}
+,{ "pid":12345, "tid":5, "ts":1728583985762979, "dur":25, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1728583985763008, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985763013, "dur":712, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/sharedassets1.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1728583985763740, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":5, "ts":1728583985763756, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985763760, "dur":479, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/sharedassets0.resource" }}
+,{ "pid":12345, "tid":5, "ts":1728583985764254, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1728583985764279, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985764282, "dur":1098, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/sharedassets0.assets.resS" }}
+,{ "pid":12345, "tid":5, "ts":1728583985765397, "dur":7935, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":5, "ts":1728583985773333, "dur":23, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985773360, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":5, "ts":1728583985773364, "dur":498, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/RuntimeInitializeOnLoads.json" }}
+,{ "pid":12345, "tid":5, "ts":1728583985773883, "dur":425225, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1728583985721440, "dur":280, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1728583985721720, "dur":2700, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1728583985724421, "dur":359, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":6, "ts":1728583985724781, "dur":202, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1728583985724986, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1728583985726192, "dur":3272, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/browscap.ini" }}
+,{ "pid":12345, "tid":6, "ts":1728583985729492, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":6, "ts":1728583985729568, "dur":15, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1728583985729586, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1728583985729591, "dur":22878, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/UnityPlayer.dll" }}
+,{ "pid":12345, "tid":6, "ts":1728583985752495, "dur":297723, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":6, "ts":1728583986050219, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1728583986050268, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":6, "ts":1728583986050275, "dur":553, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Analytics.dll" }}
+,{ "pid":12345, "tid":6, "ts":1728583986050843, "dur":148269, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985721563, "dur":176, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985721739, "dur":2601, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985724344, "dur":285, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1728583985724629, "dur":300, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985724932, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985726810, "dur":2942, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.5/machine.config" }}
+,{ "pid":12345, "tid":7, "ts":1728583985729781, "dur":80, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":7, "ts":1728583985729862, "dur":324, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985730196, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985731615, "dur":12740, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Resources/unity default resources" }}
+,{ "pid":12345, "tid":7, "ts":1728583985744389, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1728583985744477, "dur":85, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985744568, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985744575, "dur":3778, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.LocalizationModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1728583985748401, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1728583985748492, "dur":50, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985748547, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985748553, "dur":3888, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.AssetBundleModule.dll" }}
+,{ "pid":12345, "tid":7, "ts":1728583985752467, "dur":65002, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1728583985817470, "dur":40, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985817515, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":7, "ts":1728583985817521, "dur":604, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Configuration.dll" }}
+,{ "pid":12345, "tid":7, "ts":1728583985818139, "dur":380959, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1728583985721705, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1728583985721705, "dur":2646, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1728583985724354, "dur":158, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1728583985724512, "dur":140, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1728583985724656, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1728583985735841, "dur":3536, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.0/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":8, "ts":1728583985739407, "dur":96, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1728583985739504, "dur":17, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1728583985739525, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1728583985739530, "dur":5377, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.StreamingModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1728583985744944, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1728583985745029, "dur":390, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1728583985745423, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1728583985745429, "dur":5437, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.DSPGraphModule.dll" }}
+,{ "pid":12345, "tid":8, "ts":1728583985750901, "dur":447405, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":8, "ts":1728583986198307, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1728583986198348, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":8, "ts":1728583986198354, "dur":694, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.TextMeshPro.dll" }}
+,{ "pid":12345, "tid":8, "ts":1728583986199063, "dur":0, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"Player" }}
+,{ "pid":12345, "tid":8, "ts":1728583986199064, "dur":0, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985721668, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985721669, "dur":2699, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985724368, "dur":119, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":9, "ts":1728583985724487, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985724588, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985726991, "dur":2936, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/2.0/settings.map" }}
+,{ "pid":12345, "tid":9, "ts":1728583985729961, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985730040, "dur":100, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985730147, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985731582, "dur":3067, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.VideoModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985734675, "dur":215, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985734890, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985734962, "dur":4, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985734983, "dur":4498, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityAnalyticsCommonModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985739502, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985739559, "dur":14, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985739577, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985739581, "dur":5203, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.SharedInternalsModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985744817, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985744899, "dur":469, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985745372, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985745398, "dur":5007, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.GridModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985750441, "dur":95, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985750537, "dur":106, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985750650, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985750659, "dur":2962, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.AnimationModule.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985753642, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985753663, "dur":25, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985753692, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985753698, "dur":935, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Transactions.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985754653, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985754675, "dur":166, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985754850, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985754856, "dur":992, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Security.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985755863, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985755878, "dur":281, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985756164, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985756170, "dur":874, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Net.Http.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985757060, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985757076, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985757114, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985757118, "dur":881, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.EnterpriseServices.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985758013, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985758030, "dur":13, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985758045, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985758049, "dur":1233, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Data.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985759301, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985759318, "dur":13, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985759334, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985759338, "dur":872, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Configuration.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985760230, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985760254, "dur":14, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985760272, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985760278, "dur":618, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/netstandard.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985760917, "dur":189597, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985950522, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":9, "ts":1728583985950531, "dur":1056, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Assembly-CSharp.dll" }}
+,{ "pid":12345, "tid":9, "ts":1728583985951615, "dur":247508, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985721783, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985721784, "dur":2536, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985724327, "dur":238, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":10, "ts":1728583985724565, "dur":274, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985724844, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985726905, "dur":2693, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/mconfig/config.xml" }}
+,{ "pid":12345, "tid":10, "ts":1728583985729630, "dur":90, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":10, "ts":1728583985729720, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985729760, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985729766, "dur":4114, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/UnityCrashHandler64.exe" }}
+,{ "pid":12345, "tid":10, "ts":1728583985733914, "dur":213, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1728583985734128, "dur":23, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985734158, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985734168, "dur":2293, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityTestProtocolModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1728583985736486, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1728583985736575, "dur":219, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985736800, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985736807, "dur":7118, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TextRenderingModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1728583985743953, "dur":184, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1728583985744137, "dur":21, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985744180, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985744187, "dur":2904, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.Physics2DModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1728583985747114, "dur":190, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1728583985747304, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985747342, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985747376, "dur":4655, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.CoreModule.dll" }}
+,{ "pid":12345, "tid":10, "ts":1728583985752053, "dur":226270, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":10, "ts":1728583985978324, "dur":76, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985978410, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":10, "ts":1728583985978423, "dur":2578, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Environments.dll" }}
+,{ "pid":12345, "tid":10, "ts":1728583985981037, "dur":218057, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985721817, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985721817, "dur":2550, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985724367, "dur":326, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":11, "ts":1728583985724693, "dur":262, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985724967, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985726915, "dur":3097, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/2.0/web.config" }}
+,{ "pid":12345, "tid":11, "ts":1728583985730036, "dur":104, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1728583985730141, "dur":145, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985730290, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985731679, "dur":4787, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityWebRequestWWWModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1728583985736491, "dur":73, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1728583985736564, "dur":233, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985736802, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985736821, "dur":7365, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TextCoreTextEngineModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1728583985744210, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1728583985744278, "dur":224, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985744508, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985744515, "dur":3725, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ParticleSystemModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1728583985748264, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1728583985748333, "dur":37, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985748381, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985748390, "dur":3556, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ClusterInputModule.dll" }}
+,{ "pid":12345, "tid":11, "ts":1728583985751980, "dur":226234, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":11, "ts":1728583985978216, "dur":84, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985978311, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":11, "ts":1728583985978353, "dur":2325, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Environments.Internal.dll" }}
+,{ "pid":12345, "tid":11, "ts":1728583985980721, "dur":218399, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985721850, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985721850, "dur":2519, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985724369, "dur":127, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":12, "ts":1728583985724497, "dur":66, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985724591, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985734789, "dur":1599, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/2.0/machine.config" }}
+,{ "pid":12345, "tid":12, "ts":1728583985736413, "dur":54, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1728583985736467, "dur":81, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985736553, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985736559, "dur":7468, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TilemapModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1728583985744156, "dur":84, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1728583985744241, "dur":20, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985744266, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985744272, "dur":3487, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.PerformanceReportingModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1728583985747786, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1728583985747873, "dur":53, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985747931, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985747939, "dur":3162, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ClusterRendererModule.dll" }}
+,{ "pid":12345, "tid":12, "ts":1728583985751123, "dur":33169, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":12, "ts":1728583985784293, "dur":41, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985784338, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":12, "ts":1728583985784346, "dur":780, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Networking.dll" }}
+,{ "pid":12345, "tid":12, "ts":1728583985785148, "dur":413951, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583985721920, "dur":1, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583985721921, "dur":2451, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583985724373, "dur":138, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":13, "ts":1728583985724511, "dur":77, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583985724590, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583985734491, "dur":1749, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/config" }}
+,{ "pid":12345, "tid":13, "ts":1728583985736265, "dur":63, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1728583985736328, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583985736385, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583985736393, "dur":4668, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TLSModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1728583985741084, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1728583985741159, "dur":17, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583985741194, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583985741200, "dur":3632, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.RuntimeInitializeOnLoadManagerInitializerModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1728583985744873, "dur":151, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1728583985745024, "dur":381, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583985745409, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583985745414, "dur":5667, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.GIModule.dll" }}
+,{ "pid":12345, "tid":13, "ts":1728583985751116, "dur":312786, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":13, "ts":1728583986063903, "dur":92, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583986064045, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":13, "ts":1728583986064059, "dur":1675, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Registration.dll" }}
+,{ "pid":12345, "tid":13, "ts":1728583986065777, "dur":133342, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985722060, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985722060, "dur":2310, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985724371, "dur":236, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":14, "ts":1728583985724608, "dur":306, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985724917, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985726982, "dur":2977, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/2.0/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":14, "ts":1728583985729990, "dur":87, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985730077, "dur":168, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985730250, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985731678, "dur":3953, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.VFXModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985735656, "dur":96, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985735753, "dur":45, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985735809, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985735816, "dur":3584, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UIModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985739420, "dur":78, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985739498, "dur":15, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985739517, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985739524, "dur":5360, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.SpriteMaskModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985744912, "dur":163, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985745075, "dur":308, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985745396, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985745402, "dur":5202, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.GameCenterModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985750641, "dur":65, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985750706, "dur":36, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985750747, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985750773, "dur":2522, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.AndroidJNIModule.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985753315, "dur":22, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985753338, "dur":18, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985753360, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985753368, "dur":1102, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Xml.Linq.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985754494, "dur":23, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985754518, "dur":17, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985754539, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985754547, "dur":734, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.ServiceModel.Internals.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985755296, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985755314, "dur":12, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985755339, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985755344, "dur":1134, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Runtime.Serialization.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985756494, "dur":16, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985756510, "dur":15, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985756528, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985756531, "dur":705, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.IO.Compression.FileSystem.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985757248, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985757262, "dur":12, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985757276, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985757279, "dur":778, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Drawing.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985758078, "dur":19, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985758097, "dur":12, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985758111, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985758126, "dur":732, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Data.DataSetExtensions.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985758872, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985758890, "dur":14, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985758906, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985758910, "dur":833, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/System.Core.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985759757, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985759772, "dur":11, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985759785, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985759788, "dur":941, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Newtonsoft.Json.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985760744, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985760759, "dur":11, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985760772, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985760776, "dur":584, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Mono.Security.dll" }}
+,{ "pid":12345, "tid":14, "ts":1728583985761381, "dur":85, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":14, "ts":1728583985761467, "dur":18, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985761488, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985761736, "dur":510, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/StreamingAssets/UnityServicesProjectConfiguration.json" }}
+,{ "pid":12345, "tid":14, "ts":1728583985762263, "dur":20, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/sharedassets1.resource" }}
+,{ "pid":12345, "tid":14, "ts":1728583985762287, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985762291, "dur":1423, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/sharedassets1.resource" }}
+,{ "pid":12345, "tid":14, "ts":1728583985763729, "dur":15, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":14, "ts":1728583985763746, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985763750, "dur":532, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/sharedassets1.assets" }}
+,{ "pid":12345, "tid":14, "ts":1728583985764297, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":14, "ts":1728583985764313, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985764316, "dur":970, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/sharedassets0.assets" }}
+,{ "pid":12345, "tid":14, "ts":1728583985765307, "dur":77, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":14, "ts":1728583985765384, "dur":14, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985765402, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985765407, "dur":594, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/ScriptingAssemblies.json" }}
+,{ "pid":12345, "tid":14, "ts":1728583985766020, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":14, "ts":1728583985766043, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985766048, "dur":1333, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/resources.assets.resS" }}
+,{ "pid":12345, "tid":14, "ts":1728583985767403, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/resources.assets" }}
+,{ "pid":12345, "tid":14, "ts":1728583985767426, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985767432, "dur":647, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/resources.assets" }}
+,{ "pid":12345, "tid":14, "ts":1728583985768094, "dur":14, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/level1.resS" }}
+,{ "pid":12345, "tid":14, "ts":1728583985768111, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985768115, "dur":657, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/level1.resS" }}
+,{ "pid":12345, "tid":14, "ts":1728583985768793, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/level1" }}
+,{ "pid":12345, "tid":14, "ts":1728583985768815, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985768821, "dur":580, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/level1" }}
+,{ "pid":12345, "tid":14, "ts":1728583985769419, "dur":18, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/level0.resS" }}
+,{ "pid":12345, "tid":14, "ts":1728583985769441, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985769446, "dur":508, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/level0.resS" }}
+,{ "pid":12345, "tid":14, "ts":1728583985769972, "dur":12, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/level0" }}
+,{ "pid":12345, "tid":14, "ts":1728583985769987, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985769994, "dur":524, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/level0" }}
+,{ "pid":12345, "tid":14, "ts":1728583985770538, "dur":21, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":14, "ts":1728583985770563, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985770568, "dur":712, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/globalgamemanagers.assets" }}
+,{ "pid":12345, "tid":14, "ts":1728583985771294, "dur":17, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":14, "ts":1728583985771313, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985771317, "dur":518, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/globalgamemanagers" }}
+,{ "pid":12345, "tid":14, "ts":1728583985771853, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/boot.config" }}
+,{ "pid":12345, "tid":14, "ts":1728583985771928, "dur":16, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985771948, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":14, "ts":1728583985771953, "dur":599, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/boot.config" }}
+,{ "pid":12345, "tid":14, "ts":1728583985772571, "dur":426540, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985722026, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985722026, "dur":2298, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985724326, "dur":694, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":15, "ts":1728583985725021, "dur":117, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985725141, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985727294, "dur":2525, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.5/Browsers/Compat.browser" }}
+,{ "pid":12345, "tid":15, "ts":1728583985729847, "dur":82, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1728583985729929, "dur":246, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985730196, "dur":3, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985731443, "dur":2887, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.WindModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1728583985734366, "dur":264, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1728583985734630, "dur":86, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985734720, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985734726, "dur":2680, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityCurlModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1728583985737422, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1728583985737479, "dur":26, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985737509, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985737515, "dur":6976, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.SubsystemsModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1728583985744519, "dur":79, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1728583985744598, "dur":18, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985744620, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985744626, "dur":6000, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.JSONSerializeModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1728583985750687, "dur":81, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1728583985750769, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985750811, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583985750815, "dur":2374, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.AIModule.dll" }}
+,{ "pid":12345, "tid":15, "ts":1728583985753212, "dur":274608, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":15, "ts":1728583986027821, "dur":75, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583986027907, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":15, "ts":1728583986027922, "dur":2168, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.InputSystem.dll" }}
+,{ "pid":12345, "tid":15, "ts":1728583986030134, "dur":169003, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1728583985722242, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1728583985722242, "dur":2092, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1728583985724339, "dur":136, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":16, "ts":1728583985724475, "dur":22, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1728583985724505, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1728583985725919, "dur":3728, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.5/settings.map" }}
+,{ "pid":12345, "tid":16, "ts":1728583985729678, "dur":33, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake.exe" }}
+,{ "pid":12345, "tid":16, "ts":1728583985729711, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1728583985729747, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1728583985729753, "dur":1962, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake.exe" }}
+,{ "pid":12345, "tid":16, "ts":1728583985731745, "dur":117, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1728583985731862, "dur":22, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1728583985731887, "dur":2, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1728583985731893, "dur":4035, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityWebRequestAssetBundleModule.dll" }}
+,{ "pid":12345, "tid":16, "ts":1728583985735967, "dur":188101, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":16, "ts":1728583985924069, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1728583985924111, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":16, "ts":1728583985924117, "dur":801, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UI.dll" }}
+,{ "pid":12345, "tid":16, "ts":1728583985924934, "dur":274163, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985722268, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985722269, "dur":2095, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985724365, "dur":228, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":17, "ts":1728583985724594, "dur":333, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985724931, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985726927, "dur":3234, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.0/settings.map" }}
+,{ "pid":12345, "tid":17, "ts":1728583985730193, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1728583985730262, "dur":739, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985731026, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985731674, "dur":3096, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityWebRequestModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1728583985734794, "dur":68, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1728583985734862, "dur":23, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985734891, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985734896, "dur":6119, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UmbraModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1728583985741045, "dur":94, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1728583985741140, "dur":18, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985741164, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985741172, "dur":3606, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ScreenCaptureModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1728583985744804, "dur":66, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1728583985744871, "dur":35, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985744910, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985744915, "dur":3356, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.ImageConversionModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1728583985748295, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1728583985748382, "dur":25, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985748412, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985748461, "dur":3779, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.AudioModule.dll" }}
+,{ "pid":12345, "tid":17, "ts":1728583985752265, "dur":233846, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":17, "ts":1728583985986111, "dur":33, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985986148, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":17, "ts":1728583985986154, "dur":1137, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.dll" }}
+,{ "pid":12345, "tid":17, "ts":1728583985987307, "dur":211815, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985722204, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985722205, "dur":2153, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985724362, "dur":464, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":18, "ts":1728583985724826, "dur":164, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985724994, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985726851, "dur":2949, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.0/web.config" }}
+,{ "pid":12345, "tid":18, "ts":1728583985729827, "dur":88, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1728583985729915, "dur":246, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985730166, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985731596, "dur":2860, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.XRModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1728583985734479, "dur":75, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1728583985734555, "dur":17, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985734630, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985734636, "dur":2683, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityConnectModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1728583985737350, "dur":61, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1728583985737411, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985737446, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985737452, "dur":7261, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.TerrainModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1728583985744739, "dur":100, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1728583985744840, "dur":31, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985744876, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985744882, "dur":6203, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.IMGUIModule.dll" }}
+,{ "pid":12345, "tid":18, "ts":1728583985751107, "dur":41691, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":18, "ts":1728583985792799, "dur":47, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985792852, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":18, "ts":1728583985792873, "dur":630, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Scheduler.dll" }}
+,{ "pid":12345, "tid":18, "ts":1728583985793520, "dur":405573, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985722336, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985722336, "dur":2010, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985724348, "dur":128, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":19, "ts":1728583985724476, "dur":54, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985724535, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985726809, "dur":3073, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/etc/mono/4.5/DefaultWsdlHelpGenerator.aspx" }}
+,{ "pid":12345, "tid":19, "ts":1728583985729906, "dur":69, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1728583985729975, "dur":232, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985730212, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985731620, "dur":4226, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.VirtualTexturingModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1728583985735872, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1728583985735937, "dur":27, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985735968, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985735973, "dur":9001, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UIElementsModule.dll" }}
+,{ "pid":12345, "tid":19, "ts":1728583985744995, "dur":57, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":19, "ts":1728583985745052, "dur":320, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985745377, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985745399, "dur":5461, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.dll" }}
+,{ "pid":12345, "tid":19, "ts":1728583985750956, "dur":52992, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":19, "ts":1728583985803949, "dur":39, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985803993, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":19, "ts":1728583985804000, "dur":580, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Services.Core.Threading.dll" }}
+,{ "pid":12345, "tid":19, "ts":1728583985804597, "dur":394521, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985722296, "dur":0, "ph":"X", "name": "FirstLock",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985722296, "dur":2125, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985724421, "dur":191, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583985724612, "dur":329, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985724946, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985725933, "dur":3915, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/MonoBleedingEdge/EmbedRuntime/MonoPosixHelper.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583985729877, "dur":86, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583985729963, "dur":189, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985730158, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985731281, "dur":2957, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.VRModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583985734481, "dur":92, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583985734574, "dur":127, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985734706, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985734712, "dur":2898, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.UnityAnalyticsModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583985737631, "dur":58, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583985737690, "dur":38, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985737732, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985737738, "dur":6964, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.SubstanceModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583985744726, "dur":74, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583985744800, "dur":41, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985744858, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985744865, "dur":5843, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.InputLegacyModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583985750733, "dur":64, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583985750798, "dur":30, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985750832, "dur":0, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583985750838, "dur":2318, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/UnityEngine.AccessibilityModule.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583985753181, "dur":386702, "ph":"X", "name": "CheckInputSignature",  "args": { "detail":"CopyFiles C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Postprocessing.Runtime.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583986139884, "dur":34, "ph":"X", "name": "OutputFilesMissingFor",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583986139923, "dur":1, "ph":"X", "name": "StoreTimestampsOfNonGeneratedInputFiles",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":20, "ts":1728583986139929, "dur":833, "ph":"X", "name": "CopyFiles",  "args": { "detail":"C:/Users/Firaa/OneDrive/Desktop/SeventhTerminal_Build/SeventhTerminalRemake_Data/Managed/Unity.Postprocessing.Runtime.dll" }}
+,{ "pid":12345, "tid":20, "ts":1728583986140776, "dur":58345, "ph":"X", "name": "WaitingForWork", "cname":"thread_state_sleeping",  "args": { "detail":"" }}
+,{ "pid":12345, "tid":0, "ts":1728583986201671, "dur":1365, "ph":"X", "name": "ProfilerWriteOutput" }
+,{ "pid": 0, "tid": 1, "ts": 1728583986234847, "dur": 1229, "ph": "X", "name": "backend_profiler0.traceevents", "args": {} },
+{ "pid": 0, "tid": 1, "ts": 1728583986234746, "dur": 1371, "ph": "X", "name": "Write chrome-trace events", "args": {} },

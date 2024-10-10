@@ -9,6 +9,9 @@ public class ButtonManager : MonoBehaviour
     //Note that the main menu enables and disables panels for the menus to work, which is reflected in some of the functions here
     public GameObject mainMenu;
     public GameObject credits;
+    public GameObject pause;
+    public GameObject gamePlayUI;
+    [SerializeField] HudManager checkPause;
 
     public void Start()
     {
@@ -18,6 +21,11 @@ public class ButtonManager : MonoBehaviour
         {
             mainMenu.SetActive(true);
             credits.SetActive(false);
+        }
+
+        if(SceneManager.GetActiveScene().name == "BattleArena2")
+        {
+            checkPause = FindObjectOfType<HudManager>();
         }
         
     }
@@ -47,6 +55,14 @@ public class ButtonManager : MonoBehaviour
     public void ReturnToMenuFromGameplay()
     {
         SceneManager.LoadScene("MainMenu");
+    }
+
+    public void Resume()
+    {
+        gamePlayUI.SetActive(true);
+        pause.SetActive(false);
+        Time.timeScale = 1;
+        checkPause.isPaused = false;
     }
 
     public void QuitGame()
