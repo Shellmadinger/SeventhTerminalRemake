@@ -25,6 +25,8 @@ public class AltFireBullet : MonoBehaviour
 
     void DestroyOnTimer()
     {
+        //I have a weird issue where sometimes, the altfire bullet wouldn't trigger collision and just move through walls.
+        //In this case, this fucntion kills the object if it persists for too long
         seconds += Time.deltaTime % 60;
         if (seconds >= 3f)
         {
@@ -42,6 +44,7 @@ public class AltFireBullet : MonoBehaviour
         //Check layer for enemy layer
         if (other.gameObject.layer == 3)
         {
+            //Get isDamageable and apply damage if it's there
             IDamageable isDamageable = other.transform.GetComponent<IDamageable>();
             if (isDamageable != null)
             {
@@ -51,7 +54,7 @@ public class AltFireBullet : MonoBehaviour
 
         else if (other.gameObject.layer == 6 || other.gameObject.tag == "Ground")
         {
-
+            //If the bullet hits something thats environment or ground, start the coroutine
             StartCoroutine(DestroyObject());
         }
 
@@ -59,6 +62,8 @@ public class AltFireBullet : MonoBehaviour
 
     IEnumerator DestroyObject()
     {
+        //This coroutine is so that the altfire ending explosion sound doesn't trigger multiple times.
+        //We do this by setting a WaitForSeconds to a very small value after playing the sound, then doing everything else
         altFireEndingExplosionAudio.PlayOneShot(altFireEndingExplosionSound);
         yield return new WaitForSeconds(0.1f);
         bulletTrail.gameObject.transform.parent = null;

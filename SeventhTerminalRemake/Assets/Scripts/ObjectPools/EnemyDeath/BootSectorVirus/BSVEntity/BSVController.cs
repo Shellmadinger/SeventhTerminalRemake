@@ -72,6 +72,7 @@ public class BSVController : MonoBehaviour, IDamageable
             virusSource.spatialBlend = 0;
             virusSource.Play();
         }
+        //For the BSV, they have a timer of it runs out, they explode and die.
         if (health <= 0 || bSVTimer >= timeUntilExplosion)
         {
             //Get the death effect from the pool and called Kill function
@@ -118,6 +119,7 @@ public class BSVController : MonoBehaviour, IDamageable
 
     private void OnDisable()
     {
+        //bSV's are fairly powerful enemies already, so their powerup only doubles their health
         if (enemySpawner.powerUp == true)
         {
             maxHealth = 10;
@@ -129,7 +131,7 @@ public class BSVController : MonoBehaviour, IDamageable
 
     private void OnEnable()
     {
-       
+       //On Enable, set the bSVTimer and set the spawn sound to be affected by 3D space
         bSVTimer += Time.deltaTime % 60;
         virusSource.spatialBlend = 1;
         virusSource.pitch = 0.5f;

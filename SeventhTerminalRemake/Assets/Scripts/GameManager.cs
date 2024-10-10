@@ -41,6 +41,9 @@ public class GameManager : MonoBehaviour
 
     IEnumerator CountDown()
     {
+        //to do the starting countdown, we start a coroutine and reduce the a number from 3 to 0 via a for loop
+        //After each loop, we wait for a second for the sound to play
+        //Once the countdown has reach 0, we advance the game state
         countDownText.gameObject.SetActive(true);
 
         for (int i = 3; i > 0; i--)

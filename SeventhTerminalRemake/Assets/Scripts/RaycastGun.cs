@@ -66,12 +66,14 @@ public class RaycastGun : MonoBehaviour
 
                 }
 
+                //If we aren't shooting, set these booleans to false
                 else if (Input.GetMouseButton(0) != true)
                 {
                     isFiring = false;
                     usingRegularFire = false;
                 }
 
+                //When pressing left mouse button, use the altfire and increase the overheat gauge by a set amount
                 if (Input.GetMouseButtonDown(1) && isOverHeating == false && usingRegularFire == false)
                 {
                     isFiring = true;

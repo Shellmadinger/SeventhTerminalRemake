@@ -16,6 +16,7 @@ public class TextureScroll : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //Basically, just scroll the texture by a set amount of speed
         mesh.material.mainTextureOffset = new Vector2(Time.realtimeSinceStartup * scrollSpeedX, Time.realtimeSinceStartup * scrollSpeedY);
     }
 }

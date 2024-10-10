@@ -35,9 +35,11 @@ public class PlayerHealth : MonoBehaviour
 
     void HealthRegen()
     {
+        //If the player has not been hit in a while and they don't have max health, regen health based on a timer
         if(gotHit == false && health!=maxHealth)
         {
             regenTimer += 1;
+            //when the regen timer reaches a certain value, increase the player health and reset the timer
             if(regenTimer >= 700)
             {
                 health += 1f;
@@ -46,6 +48,8 @@ public class PlayerHealth : MonoBehaviour
             }
         }
 
+        //In the event the player does get hit, we reset the regent timer and start the seperate timer
+        //This is done so that the player needs to not get hit for a while before healing kicks in.
         else
         {
             regenTimer = 0;
@@ -73,6 +77,7 @@ public class PlayerHealth : MonoBehaviour
     private void OnCollisionEnter(Collision collision)
     {
         var objTag = collision.gameObject.tag;
+        //By setting objTag to the tag of the enemy, we can apply the appropriate damage values by using this switch statement
         switch (objTag)
         {
             case ("BootSectorVirus"):

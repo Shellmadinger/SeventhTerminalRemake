@@ -6,19 +6,16 @@ public class BasicMovement3D : MonoBehaviour
 {
     public float speed;
     public GameManager currentGameState;
-    public float gravityOnGround;
-    public float gravityOnJump;
+    public float gravity;
+    public float jumpForce;
     public Rigidbody body;
     [SerializeField] KnockBack knockBackBool;
     [SerializeField] LayerMask ground;
     float horiMove;
     float vertMove;
-    float rayDistance;
-    float gravity;
     Vector3 fullMovement;
     bool isGrounded;
     bool isJumping;
-    bool gameManagerOverride;
     // Update is called once per frame
     void FixedUpdate()
     {
@@ -29,18 +26,16 @@ public class BasicMovement3D : MonoBehaviour
     {
         if (currentGameState != null)
         {
-            //Debug.Log(isGrounded);
             //Check if the current game state is 1, which is when actual gameplay should start
-            if (currentGameState.gameState == 1 || gameManagerOverride == true)
+            if (currentGameState.gameState == 1)
             {
+                //Check if the player is grounded and apply our gravity value the physics engine
                 CheckGrounded();
-                //Debug.Log(Physics.gravity);
-                //if (isGrounded == true) { Physics.gravity = new Vector3(0, (gravityOnGround*-1), 0); }
-                Physics.gravity = new Vector3(0, (gravityOnGround*-1), 0);
-                //if (isJumping == true && isGrounded == false) { Physics.gravity = new Vector3(0, -50f, 0); }
+                Physics.gravity = new Vector3(0, (gravity*-1), 0);
                 //Get x and Y axises
                 horiMove = Input.GetAxis("Horizontal");
                 vertMove = Input.GetAxis("Vertical");
+                //Set fullMovement to the vector of horiMove and vertMove, and normalize the vector if it goes over 1
                 fullMovement = new Vector3(horiMove, 0f, vertMove);
                 if(fullMovement.magnitude > 1f)
                 {
@@ -55,48 +50,30 @@ public class BasicMovement3D : MonoBehaviour
                     isJumping = true;
                     if (isJumping == true)
                     {
-                        //Vector3 jumpForce = Vector3.up * 100f;
-                        body.velocity += (Vector3.up * Physics.gravity.y * (gravityOnJump) * Time.deltaTime)*-1;
-   
-                       
+                        //When jumping, add this equation to body.velocity
+                        body.velocity += (Vector3.up * Physics.gravity.y * jumpForce * Time.deltaTime)*-1;
                     }
 
                 }
 
             }
         }
-
-        else
-        {
-            gameManagerOverride = true;
-        }
-       
-
     }
     void CheckGrounded()
     {
+        //Send a raycast downwards, and if it hits, set isGrounded to true. Otherwise, set it to false.
+        //Fairly simple isGrounded Check
         RaycastHit hit;
         if(Physics.Raycast(transform.position, Vector3.down, out hit, 5f, ground))
         {
             isGrounded = true;
+            isJumping = false;
         }
 
         else
         {
             isGrounded = false;
         }
-    }
-
-
-    private void OnCollisionStay(Collision collision)
-    {
-        isGrounded = true;
-        isJumping = false;
-    }
-
-    private void OnCollisionExit(Collision collision)
-    {
-        if (collision.gameObject.tag == "Ground") { isGrounded = false; }
     }
 
 }

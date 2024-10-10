@@ -44,7 +44,7 @@ public class EnemySpawner : MonoBehaviour
             //This is also why the timer even works to begin with. This is the stupidest solution to a problem I have ever used during my time with Unity
             //Why?
             internalTimer += Time.deltaTime;
-            timeElapsedMin = Mathf.FloorToInt(internalTimer / 60)+3 ;// convert internalTimer to minutes
+            timeElapsedMin = Mathf.FloorToInt(internalTimer / 60) ;// convert internalTimer to minutes
             timeToSpawn = 4 / (1 + timeElapsedMin)+1; //Formula that increases spawn frequency after every minute
             timer += Time.deltaTime % 60; //Also run another timer that's converted into second
            

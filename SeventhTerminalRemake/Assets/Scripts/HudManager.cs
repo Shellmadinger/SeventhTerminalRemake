@@ -27,6 +27,7 @@ public class HudManager : MonoBehaviour
     {
         if (currentState.gameState == 1 && Input.GetKeyDown(KeyCode.P))
         {
+            //if the game is playing and we press "P", we pause the game
             if(isPaused == false)
             {
                 gamePlayUI.SetActive(false);
@@ -35,6 +36,7 @@ public class HudManager : MonoBehaviour
                 isPaused = true;
             }
 
+            //Press "P" again to unpause the game
             else
             {
                 gamePlayUI.SetActive(true);
